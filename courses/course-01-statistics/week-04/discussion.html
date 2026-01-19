@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discussion Topics: Joint Distributions and Independence">
+    <title>Discussion: Joint Distributions & Independence | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 4</a>
+            <div class="navbar-subtitle">Discussion Topics</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <h1>Week 4 Discussion Topics</h1>
+            <p>Explore how joint distributions and independence assumptions shape machine learning models.</p>
+
+            <div class="discussion-topic">
+                <h4>Topic 1: The Independence Assumption in Practice</h4>
+                <p>Many ML algorithms assume independence between features or observations.</p>
+                <ul>
+                    <li>Why does Naive Bayes often work well in practice despite its clearly violated independence
+                        assumption?</li>
+                    <li>In what scenarios might the independence assumption lead to poor model performance?</li>
+                    <li>How do models like Hidden Markov Models or RNNs relax independence assumptions?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 2: Copulas and Dependence Modeling</h4>
+                <p>Copulas separate marginal distributions from dependence structure.</p>
+                <ul>
+                    <li>Why might modeling dependence separately from marginals be useful in practice?</li>
+                    <li>How are copulas used in risk modeling for finance or other domains?</li>
+                    <li>What are the limitations of assuming Gaussian dependence (elliptical copulas)?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 3: High-Dimensional Joint Distributions</h4>
+                <p>In modern ML, we often deal with thousands or millions of variables.</p>
+                <ul>
+                    <li>Why does estimating joint distributions become intractable in high dimensions ("curse of
+                        dimensionality")?</li>
+                    <li>How do graphical models help represent high-dimensional distributions compactly?</li>
+                    <li>What role do variational autoencoders and normalizing flows play in learning complex joint
+                        distributions?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-secondary">← Take Quiz</a>
+                <a href="../week-05/index.html" class="btn btn-primary">Week 5: Bayes' Theorem →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

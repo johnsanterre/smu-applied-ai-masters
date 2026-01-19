@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Local Search | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 6</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 6 Quiz: Local Search</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Plateaus are flat regions.","B":"Correct! Local optimum is better than neighbors but not globally best.","C":"Starting point.","D":"Global is the best overall."}'>
+                <h4>Q1: A local optimum is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The best solution globally</li>
+                    <li class="quiz-option" data-value="B">Better than all neighbors but not necessarily global best
+                    </li>
+                    <li class="quiz-option" data-value="C">The starting point</li>
+                    <li class="quiz-option" data-value="D">Same as global optimum</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Hill climbing always goes uphill.","B":"BFS is systematic.","C":"Correct! SA accepts worse moves with decreasing probability.","D":"Genetic uses population."}'>
+                <h4>Q2: Simulated annealing escapes local optima by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Always moving to better states</li>
+                    <li class="quiz-option" data-value="B">Exploring all states systematically</li>
+                    <li class="quiz-option" data-value="C">Sometimes accepting worse moves</li>
+                    <li class="quiz-option" data-value="D">Using crossover and mutation</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Temperature controls probability of accepting worse moves.","B":"Not about speed.","C":"Not about population.","D":"Not about depth."}'>
+                <h4>Q3: In simulated annealing, \"temperature\" controls:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Probability of accepting worse moves</li>
+                    <li class="quiz-option" data-value="B">Speed of the algorithm</li>
+                    <li class="quiz-option" data-value="C">Number of solutions generated</li>
+                    <li class="quiz-option" data-value="D">Depth of search</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Selection chooses fit individuals.","B":"Crossover combines parents.","C":"Fitness evaluates solutions.","D":"Correct! Mutation introduces random changes for diversity."}'>
+                <h4>Q4: In genetic algorithms, mutation:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Selects the best individuals</li>
+                    <li class="quiz-option" data-value="B">Combines two parent solutions</li>
+                    <li class="quiz-option" data-value="C">Evaluates solution quality</li>
+                    <li class="quiz-option" data-value="D">Introduces random changes for diversity</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Hill climbing.","B":"Correct! No path needed means local search is appropriate.","C":"CSP solvers.","D":"Planning algorithms."}'>
+                <h4>Q5: Local search is best when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The path to solution matters</li>
+                    <li class="quiz-option" data-value="B">Only the final state matters</li>
+                    <li class="quiz-option" data-value="C">The problem has constraints</li>
+                    <li class="quiz-option" data-value="D">We need a sequence of actions</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 6</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

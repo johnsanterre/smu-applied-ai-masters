@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Key terms and definitions for Statistical Inference and Probabilistic Modeling - SMU Masters in Applied AI">
+    <title>Glossary | Statistical Inference and Probabilistic Modeling | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Course Home</a>
+            <div class="navbar-subtitle">Course 1: Key Terms</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card">
+            <span class="badge badge-foundation">Foundation Phase</span>
+            <h1>Key Terms & Definitions</h1>
+            <p>A comprehensive glossary of essential concepts covered throughout the course. Terms are organized by
+                topic area for easy reference.</p>
+
+            <h2>Probability Foundations</h2>
+
+            <div class="glossary-term">
+                <h4>Sample Space (Ω)</h4>
+                <p>The set of all possible outcomes of a random experiment. For example, when rolling a die, the sample
+                    space is {1, 2, 3, 4, 5, 6}. Understanding sample spaces is fundamental because all probability
+                    calculations are defined relative to this universal set of possibilities.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Event</h4>
+                <p>A subset of the sample space representing outcomes of interest. Events can be simple (a single
+                    outcome) or compound (multiple outcomes). For example, "rolling an even number" is the event {2, 4,
+                    6}. Events form the basis for assigning probabilities to real-world scenarios.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Probability Axioms</h4>
+                <p>The three fundamental rules that all probability measures must satisfy: (1) P(A) ≥ 0 for any event A,
+                    (2) P(Ω) = 1, and (3) for mutually exclusive events, P(A ∪ B) = P(A) + P(B). These axioms,
+                    established by Kolmogorov, provide the mathematical foundation for all of probability theory.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Random Variable</h4>
+                <p>A function that maps outcomes from a sample space to numerical values. Random variables can be
+                    discrete (taking countable values like counts) or continuous (taking any value in an interval like
+                    measurements). They provide the bridge between abstract probability and numerical analysis.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Probability Mass Function (PMF)</h4>
+                <p>For discrete random variables, the PMF gives the probability that the variable takes each possible
+                    value: P(X = x). The sum of PMF values over all possible outcomes must equal 1. Common examples
+                    include the Bernoulli, Binomial, and Poisson distributions.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Probability Density Function (PDF)</h4>
+                <p>For continuous random variables, the PDF is a function f(x) such that probabilities are computed as
+                    areas under the curve. Unlike PMF, f(x) itself is not a probability—only integrals of f(x) give
+                    probabilities. Common examples include the Normal, Exponential, and Uniform distributions.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Cumulative Distribution Function (CDF)</h4>
+                <p>The function F(x) = P(X ≤ x), giving the probability that a random variable is less than or equal to
+                    x. The CDF is defined for both discrete and continuous variables, always non-decreasing, and ranges
+                    from 0 to 1. It's particularly useful for computing percentiles and comparing distributions.</p>
+            </div>
+
+            <h2>Expectation & Moments</h2>
+
+            <div class="glossary-term">
+                <h4>Expected Value (Mean)</h4>
+                <p>The weighted average of all possible values, where weights are probabilities: E[X] = Σ x·P(X=x) for
+                    discrete, or ∫ x·f(x)dx for continuous. The expected value represents the "center of mass" of a
+                    distribution and is the most common measure of central tendency in statistics.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Variance</h4>
+                <p>A measure of spread defined as Var(X) = E[(X - μ)²], the expected squared deviation from the mean.
+                    Variance quantifies how dispersed values are around the center. Its square root, the standard
+                    deviation, is often preferred for interpretability since it shares units with the original variable.
+                </p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Covariance</h4>
+                <p>A measure of how two random variables vary together: Cov(X,Y) = E[(X - μₓ)(Y - μᵧ)]. Positive
+                    covariance indicates variables tend to increase together; negative covariance indicates one tends to
+                    decrease as the other increases. Covariance is fundamental to understanding relationships between
+                    variables.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Correlation</h4>
+                <p>The normalized covariance: ρ(X,Y) = Cov(X,Y)/(σₓ·σᵧ), ranging from -1 to 1. Correlation measures the
+                    strength and direction of linear relationship between variables. Unlike covariance, it is
+                    dimensionless and allows comparison across different scales.</p>
+            </div>
+
+            <h2>Conditional Probability & Bayes</h2>
+
+            <div class="glossary-term">
+                <h4>Conditional Probability</h4>
+                <p>The probability of event A given that event B has occurred: P(A|B) = P(A ∩ B)/P(B). Conditioning
+                    updates our probability assessments based on new information. This concept is central to Bayesian
+                    inference and many machine learning algorithms.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Bayes' Theorem</h4>
+                <p>The formula P(A|B) = P(B|A)·P(A)/P(B), which allows us to reverse conditional probabilities. Bayes'
+                    theorem is foundational for updating beliefs based on evidence and forms the basis of Bayesian
+                    statistics, spam filters, medical diagnosis, and many ML classifiers.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Prior Probability</h4>
+                <p>In Bayesian inference, the probability assigned to a hypothesis before observing data: P(θ). Priors
+                    encode our initial beliefs or background knowledge. Choosing appropriate priors is both an art and
+                    science, with options ranging from uninformative to highly informative.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Posterior Probability</h4>
+                <p>The updated probability of a hypothesis after observing data: P(θ|data). The posterior combines prior
+                    beliefs with evidence from data via Bayes' theorem. It represents our refined understanding and is
+                    the basis for Bayesian decision-making.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Likelihood</h4>
+                <p>The probability of observing the data given a hypothesis: P(data|θ). While mathematically similar to
+                    a probability, likelihood is viewed as a function of the parameters θ, not the data. Maximum
+                    likelihood estimation finds parameters that maximize this function.</p>
+            </div>
+
+            <h2>Statistical Inference</h2>
+
+            <div class="glossary-term">
+                <h4>Central Limit Theorem (CLT)</h4>
+                <p>States that the sampling distribution of the mean approaches a normal distribution as sample size
+                    increases, regardless of the population distribution (given finite variance). The CLT explains why
+                    the normal distribution appears so frequently and justifies many statistical procedures.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Law of Large Numbers</h4>
+                <p>As sample size increases, the sample mean converges to the population mean. This theorem justifies
+                    using sample statistics to estimate population parameters and underlies Monte Carlo methods. There
+                    are both weak and strong versions of this fundamental result.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Estimator</h4>
+                <p>A rule or formula for computing an estimate of a population parameter from sample data. Good
+                    estimators are unbiased (expected value equals true parameter), consistent (converge to true value
+                    with more data), and efficient (minimum variance among unbiased estimators).</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Confidence Interval</h4>
+                <p>An interval [L, U] constructed so that, over repeated sampling, a specified proportion (e.g., 95%) of
+                    such intervals contain the true parameter. Confidence intervals quantify estimation uncertainty. A
+                    95% CI does not mean 95% probability the parameter is in the interval—that's a Bayesian credible
+                    interval.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Hypothesis Testing</h4>
+                <p>A formal procedure for making decisions about population parameters based on sample data. We
+                    formulate null (H₀) and alternative (H₁) hypotheses, compute a test statistic, and reject or fail to
+                    reject H₀ based on how extreme the observed statistic is under H₀.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>P-value</h4>
+                <p>The probability of observing a test statistic as extreme as (or more extreme than) the one computed,
+                    assuming the null hypothesis is true. Small p-values suggest the data is unlikely under H₀,
+                    providing evidence against it. P-values are often misinterpreted—they are not the probability H₀ is
+                    true.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Type I and Type II Errors</h4>
+                <p>Type I error (α): Rejecting H₀ when it's actually true (false positive). Type II error (β): Failing
+                    to reject H₀ when it's actually false (false negative). Statistical power (1-β) is the probability
+                    of correctly rejecting a false null hypothesis. There's a fundamental trade-off between these error
+                    types.</p>
+            </div>
+
+            <h2>Maximum Likelihood & Bayesian Methods</h2>
+
+            <div class="glossary-term">
+                <h4>Maximum Likelihood Estimation (MLE)</h4>
+                <p>A method for estimating parameters by finding values that maximize the likelihood function. MLE is
+                    widely used because it has desirable asymptotic properties: estimates are consistent, asymptotically
+                    normal, and asymptotically efficient. Many common estimators (sample mean, sample variance) are
+                    MLEs.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Fisher Information</h4>
+                <p>A measure of how much information a random variable carries about an unknown parameter. Higher Fisher
+                    information means the parameter can be estimated more precisely. It determines the asymptotic
+                    variance of MLEs and sets a lower bound on estimator variance (Cramér-Rao bound).</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Conjugate Prior</h4>
+                <p>A prior distribution that, when combined with a particular likelihood, produces a posterior in the
+                    same family as the prior. For example, a Beta prior with Binomial likelihood yields a Beta
+                    posterior. Conjugate priors simplify Bayesian calculations and provide closed-form posterior
+                    updates.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>MAP Estimation</h4>
+                <p>Maximum A Posteriori estimation finds the parameter value that maximizes the posterior distribution.
+                    MAP combines likelihood with prior information and can be seen as regularized MLE. When the prior is
+                    uniform, MAP reduces to MLE.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Credible Interval</h4>
+                <p>In Bayesian statistics, an interval containing a specified probability mass (e.g., 95%) of the
+                    posterior distribution. Unlike frequentist confidence intervals, credible intervals have a direct
+                    probabilistic interpretation: there's a 95% probability the parameter lies within a 95% credible
+                    interval.</p>
+            </div>
+
+            <h2>Markov Chains & Stochastic Processes</h2>
+
+            <div class="glossary-term">
+                <h4>Markov Chain</h4>
+                <p>A sequence of random variables where the probability of each state depends only on the previous state
+                    (the Markov property): P(Xₙ₊₁|X₁,...,Xₙ) = P(Xₙ₊₁|Xₙ). Markov chains model memoryless processes and
+                    are fundamental to MCMC methods used in Bayesian inference.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Transition Matrix</h4>
+                <p>For discrete Markov chains, the matrix P where Pᵢⱼ = P(Xₙ₊₁=j|Xₙ=i) gives transition probabilities
+                    between states. Rows sum to 1 (stochastic matrix). Matrix powers Pⁿ give probabilities for n-step
+                    transitions, enabling long-term behavior analysis.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Stationary Distribution</h4>
+                <p>A probability distribution π that remains unchanged under the Markov chain dynamics: πP = π. For
+                    ergodic chains, the distribution converges to the unique stationary distribution regardless of
+                    starting state. This property is exploited by MCMC algorithms to sample from target distributions.
+                </p>
+            </div>
+
+            <h2>Probabilistic Graphical Models</h2>
+
+            <div class="glossary-term">
+                <h4>Bayesian Network</h4>
+                <p>A directed acyclic graph (DAG) representing conditional dependencies among random variables. Nodes
+                    represent variables; directed edges represent direct dependencies. The joint distribution factors as
+                    a product of conditional distributions: P(X₁,...,Xₙ) = ∏ P(Xᵢ|Parents(Xᵢ)). Used extensively in AI
+                    for reasoning under uncertainty.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Markov Random Field (MRF)</h4>
+                <p>An undirected graphical model where nodes represent variables and edges represent dependencies. MRFs
+                    satisfy the Markov property: a variable is conditionally independent of non-neighbors given its
+                    neighbors. Common in image processing and spatial statistics.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Conditional Independence</h4>
+                <p>Variables X and Y are conditionally independent given Z (written X ⊥ Y | Z) if P(X,Y|Z) =
+                    P(X|Z)P(Y|Z). Conditional independence is the key concept underlying graphical models, enabling
+                    efficient factorization of joint distributions and tractable inference.</p>
+            </div>
+
+            <h2>Monte Carlo Methods</h2>
+
+            <div class="glossary-term">
+                <h4>Monte Carlo Integration</h4>
+                <p>Using random sampling to approximate integrals: E[f(X)] ≈ (1/n)Σf(xᵢ) where xᵢ are samples from the
+                    distribution of X. Monte Carlo methods are essential when analytical integration is intractable,
+                    which is common in Bayesian inference with complex posteriors.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Markov Chain Monte Carlo (MCMC)</h4>
+                <p>A class of algorithms that sample from a target distribution by constructing a Markov chain whose
+                    stationary distribution is the target. MCMC enables Bayesian inference for complex models where the
+                    posterior cannot be computed analytically. Key algorithms include Metropolis-Hastings and Gibbs
+                    sampling.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Metropolis-Hastings Algorithm</h4>
+                <p>An MCMC algorithm that generates samples by proposing moves and accepting/rejecting based on an
+                    acceptance probability. The acceptance ratio ensures detailed balance, guaranteeing convergence to
+                    the target distribution. It only requires knowing the target up to a normalizing constant.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Gibbs Sampling</h4>
+                <p>A special case of Metropolis-Hastings where we iteratively sample each variable from its conditional
+                    distribution given current values of other variables. All proposals are accepted. Gibbs sampling is
+                    efficient when conditional distributions are easy to sample from.</p>
+            </div>
+
+            <h2>Information Theory</h2>
+
+            <div class="glossary-term">
+                <h4>Entropy</h4>
+                <p>A measure of uncertainty or information content: H(X) = -Σ P(x)log P(x). High entropy means high
+                    uncertainty; low entropy means the distribution is concentrated. Entropy is measured in bits (log
+                    base 2) or nats (natural log). It's fundamental to data compression and machine learning.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Cross-Entropy</h4>
+                <p>H(P,Q) = -Σ P(x)log Q(x), measuring the average number of bits needed to encode samples from P using
+                    a code optimized for Q. Cross-entropy is widely used as a loss function in classification, where P
+                    is the true label distribution and Q is the predicted distribution.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Kullback-Leibler (KL) Divergence</h4>
+                <p>D_KL(P||Q) = Σ P(x)log(P(x)/Q(x)), measuring how distribution P differs from distribution Q. KL
+                    divergence is always non-negative (zero iff P=Q) but is not symmetric. It appears in variational
+                    inference, information theory, and as a regularizer in machine learning.</p>
+            </div>
+
+            <div class="glossary-term">
+                <h4>Mutual Information</h4>
+                <p>I(X;Y) = H(X) - H(X|Y), measuring how much information one variable provides about another. Mutual
+                    information is symmetric and non-negative, equaling zero iff X and Y are independent. It's used in
+                    feature selection, neural network analysis, and information-theoretic learning.</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="readings.html" class="btn btn-secondary">← Readings</a>
+                <a href="week-01/index.html" class="btn btn-primary">Start Week 1 →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../index.html">Program Home</a></p>
+    </footer>
+</body>
+
+</html>

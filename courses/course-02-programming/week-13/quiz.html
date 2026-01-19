@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Pandas | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 13</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 13 Quiz: Pandas</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! DataFrame is 2D, Series is 1D.","B":"Opposite.","C":"Both have labels.","D":"Both have indexes."}'>
+                <h4>Q1: DataFrame vs Series?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">DataFrame is 2D; Series is 1D</li>
+                    <li class="quiz-option" data-value="B">Series is 2D; DataFrame is 1D</li>
+                    <li class="quiz-option" data-value="C">DataFrame has no labels</li>
+                    <li class="quiz-option" data-value="D">Series has no index</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"iloc is integer-based.","B":"index is the row labels.","C":"Correct! loc uses labels, iloc uses integers.","D":"Both work differently."}'>
+                <h4>Q2: df.loc vs df.iloc?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">iloc is for labels</li>
+                    <li class="quiz-option" data-value="B">loc is for integers</li>
+                    <li class="quiz-option" data-value="C">loc uses labels; iloc uses integers</li>
+                    <li class="quiz-option" data-value="D">They are identical</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"dropna removes missing.","B":"Correct! fillna replaces NaN with specified value.","C":"isna checks for missing.","D":"replace is more general."}'>
+                <h4>Q3: How do you fill missing values with 0?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">df.dropna(0)</li>
+                    <li class="quiz-option" data-value="B">df.fillna(0)</li>
+                    <li class="quiz-option" data-value="C">df.isna(0)</li>
+                    <li class="quiz-option" data-value="D">df.replace(0)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"sort is not pandas function.","B":"read_csv reads files.","C":"concat joins datasets.","D":"Correct! groupby groups then aggregates."}'>
+                <h4>Q4: What does df.groupby(\"category\").mean() do?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sorts by category</li>
+                    <li class="quiz-option" data-value="B">Reads a file</li>
+                    <li class="quiz-option" data-value="C">Concatenates DataFrames</li>
+                    <li class="quiz-option" data-value="D">Computes mean for each category</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! merge combines on common columns like SQL join.","B":"concat stacks DataFrames.","C":"append is deprecated.","D":"join is label-based on index."}'>
+                <h4>Q5: Which combines DataFrames on common columns?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">pd.merge()</li>
+                    <li class="quiz-option" data-value="B">pd.concat()</li>
+                    <li class="quiz-option" data-value="C">df.append()</li>
+                    <li class="quiz-option" data-value="D">df.combine()</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 13</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

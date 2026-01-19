@@ -1,0 +1,691 @@
+/* ========================================
+   SMU Masters in Applied AI - Design System
+   ======================================== */
+
+/* CSS Custom Properties (Variables) */
+:root {
+  /* Brand Colors */
+  --smu-blue: #354CA1;
+  --smu-red: #CC0035;
+  --smu-blue-dark: #2a3d81;
+  --smu-red-dark: #a3002a;
+  
+  /* Background Colors */
+  --bg-page: #f7f9fc;
+  --bg-card: #ffffff;
+  --bg-resources: #f8f9fa;
+  
+  /* Text Colors */
+  --text-heading: #333333;
+  --text-body: #444444;
+  --text-muted: #666666;
+  --text-white: #ffffff;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 25px rgba(53, 76, 161, 0.15);
+  
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --line-height: 1.6;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--text-body);
+  background-color: var(--bg-page);
+  min-height: 100vh;
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.25rem;
+  color: var(--smu-blue);
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.0em;
+  margin-bottom: 0.4em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+p {
+  margin-bottom: 0.6em;
+}
+
+a {
+  color: var(--smu-red);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--smu-red-dark);
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin-bottom: 0.8em;
+  padding-left: var(--space-lg);
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* ========================================
+   Navbar
+   ======================================== */
+.navbar {
+  background-color: var(--smu-blue);
+  color: var(--text-white);
+  padding: var(--space-md) var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--text-white);
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+
+.navbar a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.navbar-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.navbar-back {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.navbar-back::before {
+  content: "←";
+}
+
+/* ========================================
+   Main Container
+   ======================================== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  padding-bottom: var(--space-3xl);
+}
+
+.container-wide {
+  max-width: 1200px;
+}
+
+/* ========================================
+   Content Card
+   ======================================== */
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-xl);
+  border-top: 5px solid var(--smu-red);
+}
+
+.card-no-border {
+  border-top: none;
+}
+
+/* ========================================
+   Course Grid (Homepage)
+   ======================================== */
+.program-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.program-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.program-header .subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-xl);
+}
+
+.course-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border-top: 5px solid var(--smu-red);
+  padding: var(--space-lg);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.course-number {
+  display: inline-block;
+  background-color: var(--smu-blue);
+  color: var(--text-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.course-card h3 {
+  color: var(--smu-blue);
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  font-size: 1.15rem;
+}
+
+.course-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.course-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-weight: 600;
+  color: var(--smu-red);
+}
+
+.course-link::after {
+  content: " →";
+}
+
+/* ========================================
+   Week Navigation (Course Landing Page)
+   ======================================== */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}
+
+.week-card {
+  background-color: var(--bg-card);
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid var(--smu-blue);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  transition: all var(--transition-normal);
+}
+
+.week-card:hover {
+  border-left-color: var(--smu-red);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.week-card a {
+  display: block;
+  color: var(--text-heading);
+}
+
+.week-card a:hover {
+  text-decoration: none;
+}
+
+.week-number {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.week-title {
+  font-weight: 600;
+  color: var(--smu-blue);
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Resources Section
+   ======================================== */
+.resources-section {
+  background-color: var(--bg-resources);
+  border-left: 4px solid var(--smu-blue);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-radius: var(--radius-sm);
+}
+
+.resources-section h3 {
+  margin-top: 0;
+  color: var(--smu-blue);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--smu-red);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--smu-red-dark);
+  color: var(--text-white);
+}
+
+.btn-secondary {
+  background-color: var(--smu-blue);
+  color: var(--text-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--smu-blue-dark);
+  color: var(--text-white);
+}
+
+.btn-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+/* ========================================
+   Learning Objectives
+   ======================================== */
+.objectives-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.objectives-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.objectives-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--smu-blue);
+  font-weight: bold;
+}
+
+/* ========================================
+   Glossary
+   ======================================== */
+.glossary-term {
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--smu-red);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-sm);
+}
+
+.glossary-term h4 {
+  color: var(--smu-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.glossary-term p {
+  color: var(--text-body);
+  margin-bottom: 0;
+}
+
+/* ========================================
+   Quiz Styles
+   ======================================== */
+.quiz-question {
+  background-color: var(--bg-card);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.quiz-question h4 {
+  color: var(--text-heading);
+  margin-bottom: var(--space-md);
+}
+
+.quiz-options {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-option {
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.quiz-option:hover {
+  border-color: var(--smu-blue);
+  background-color: rgba(53, 76, 161, 0.05);
+}
+
+.quiz-option.selected {
+  border-color: var(--smu-blue);
+  background-color: rgba(53, 76, 161, 0.1);
+}
+
+.quiz-option.correct {
+  border-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.quiz-option.incorrect {
+  border-color: var(--smu-red);
+  background-color: rgba(204, 0, 53, 0.1);
+}
+
+.quiz-explanation {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--bg-resources);
+  border-radius: var(--radius-sm);
+  display: none;
+}
+
+.quiz-explanation.show {
+  display: block;
+}
+
+/* ========================================
+   Discussion Topics
+   ======================================== */
+.discussion-topic {
+  background-color: var(--bg-card);
+  border: 1px solid #e0e0e0;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.discussion-topic h4 {
+  color: var(--smu-blue);
+  margin-bottom: var(--space-sm);
+}
+
+.discussion-topic p {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ========================================
+   Readings List
+   ======================================== */
+.reading-item {
+  padding: var(--space-md);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.reading-item:last-child {
+  border-bottom: none;
+}
+
+.reading-title {
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.reading-author {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.reading-source {
+  color: var(--smu-blue);
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: var(--space-2xl);
+}
+
+.footer a {
+  color: var(--smu-blue);
+}
+
+/* ========================================
+   Progress Tracker
+   ======================================== */
+.progress-bar {
+  background-color: #e0e0e0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--smu-blue), var(--smu-red));
+  height: 100%;
+  transition: width var(--transition-normal);
+}
+
+.course-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   Badges
+   ======================================== */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.badge-foundation {
+  background-color: rgba(53, 76, 161, 0.1);
+  color: var(--smu-blue);
+}
+
+.badge-core {
+  background-color: rgba(204, 0, 53, 0.1);
+  color: var(--smu-red);
+}
+
+.badge-advanced {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.badge-capstone {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #856404;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .navbar-content {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+  
+  .container {
+    padding: var(--space-md);
+  }
+  
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .week-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+  .navbar, .btn, .quiz-options {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.text-center { text-align: center; }
+.text-muted { color: var(--text-muted); }
+.mt-1 { margin-top: var(--space-md); }
+.mt-2 { margin-top: var(--space-xl); }
+.mb-1 { margin-bottom: var(--space-md); }
+.mb-2 { margin-bottom: var(--space-xl); }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 14: Information Theory | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-back">Course Home</a>
+            <div class="navbar-subtitle">Week 14: Information Theory Basics</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <span class="badge badge-foundation">Week 14 of 15</span>
+            <h1>Information Theory Basics</h1>
+            <p>This week introduces Shannon's information theory. Concepts like entropy and KL divergence are
+                fundamental to understanding loss functions, compression, and representation learning.</p>
+            <h2>Learning Objectives</h2>
+            <ul class="objectives-list">
+                <li>Define and compute entropy for discrete distributions</li>
+                <li>Understand cross-entropy and its role as a loss function</li>
+                <li>Apply KL divergence to measure distribution differences</li>
+                <li>Compute mutual information between variables</li>
+                <li>Connect information theory to ML concepts</li>
+            </ul>
+            <h2>Key Concepts</h2>
+            <div class="resources-section">
+                <ul>
+                    <li><strong>Entropy:</strong> H(X) = -Σ P(x)log P(x)</li>
+                    <li><strong>Cross-Entropy:</strong> H(P,Q) = -Σ P(x)log Q(x)</li>
+                    <li><strong>KL Divergence:</strong> D_KL(P||Q) = Σ P(x)log(P(x)/Q(x))</li>
+                    <li><strong>Mutual Information:</strong> I(X;Y) = H(X) - H(X|Y)</li>
+                </ul>
+            </div>
+            <h2>Week Resources</h2>
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-primary">Take Quiz</a>
+                <a href="discussion.html" class="btn btn-secondary">Discussion Topics</a>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="../week-13/index.html" class="btn btn-secondary">← Week 13: Monte Carlo</a>
+                <a href="../week-15/index.html" class="btn btn-primary">Week 15: Capstone →</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

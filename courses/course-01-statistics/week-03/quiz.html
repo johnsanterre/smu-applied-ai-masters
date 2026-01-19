@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Expectation and Variance">
+    <title>Quiz: Expectation & Variance | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 3</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <h1>Week 3 Quiz: Expectation & Variance</h1>
+            <p>Test your understanding of expected value, variance, and their properties.</p>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "E[3X] = 3E[X] = 3(4) = 12, not 4. Constants multiply out of the expectation.",
+                "B": "E[3X + 2] = 3E[X] + 2 = 3(4) + 2 = 14, not 6. You add the constant, not multiply by it separately.",
+                "C": "Correct! By linearity: E[3X + 2] = 3E[X] + 2 = 3(4) + 2 = 12 + 2 = 14.",
+                "D": "This would be E[3X] × 2 = 24, which is not how expectation works with addition."
+            }'>
+                <h4>Question 1: If E[X] = 4, what is E[3X + 2]?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">4</li>
+                    <li class="quiz-option" data-value="B">6</li>
+                    <li class="quiz-option" data-value="C">14</li>
+                    <li class="quiz-option" data-value="D">24</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "Var(2X) = 4·Var(X) = 4(9) = 36, not 18. The constant is squared when it comes out of variance.",
+                "B": "Correct! Var(aX) = a²Var(X), so Var(2X) = 2²·Var(X) = 4(9) = 36.",
+                "C": "This would be Var(X) unchanged, but multiplying X by 2 increases the spread.",
+                "D": "81 = 9² would be squaring the variance itself, which is not correct."
+            }'>
+                <h4>Question 2: If Var(X) = 9, what is Var(2X)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">18</li>
+                    <li class="quiz-option" data-value="B">36</li>
+                    <li class="quiz-option" data-value="C">9</li>
+                    <li class="quiz-option" data-value="D">81</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! Adding a constant shifts the distribution but does not change its spread. Var(X + c) = Var(X) for any constant c.",
+                "B": "Adding 5 to the variance would suggest spread changes with translation, which is false.",
+                "C": "Squaring the additive constant has no basis in variance properties.",
+                "D": "There is no 5X term here, so this interpretation is incorrect."
+            }'>
+                <h4>Question 3: If Var(X) = 9, what is Var(X + 5)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">9</li>
+                    <li class="quiz-option" data-value="B">14</li>
+                    <li class="quiz-option" data-value="C">34</li>
+                    <li class="quiz-option" data-value="D">225</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "E[X + Y] = E[X] + E[Y] always holds, regardless of independence. So this is true but not specific to independence.",
+                "B": "E[X·Y] = E[X]·E[Y] only when X and Y are independent. This is actually a key consequence of independence.",
+                "C": "Var(X + Y) = Var(X) + Var(Y) requires zero covariance, which independence implies. This is also true for independent variables.",
+                "D": "Correct! All three statements are true when X and Y are independent. The expectation of a product equals the product of expectations, and variance of a sum equals sum of variances (since Cov(X,Y) = 0)."
+            }'>
+                <h4>Question 4: If X and Y are independent random variables, which statement is TRUE?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">E[X + Y] = E[X] + E[Y]</li>
+                    <li class="quiz-option" data-value="B">E[X · Y] = E[X] · E[Y]</li>
+                    <li class="quiz-option" data-value="C">Var(X + Y) = Var(X) + Var(Y)</li>
+                    <li class="quiz-option" data-value="D">All of the above</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The correlation being 0 just means no linear relationship. There could still be a non-linear relationship like Y = X².",
+                "B": "Uncorrelated variables can still be dependent. The classic example: if X is uniform on [-1, 1] and Y = X², then Cov(X, Y) = 0 but they are clearly dependent.",
+                "C": "Correct! Zero correlation only implies no LINEAR relationship. X and Y could have a perfect non-linear relationship (like Y = X²) and still have zero correlation.",
+                "D": "Correlation ranges from -1 to 1, so zero correlation is meaningful and tells us about the absence of linear relationship."
+            }'>
+                <h4>Question 5: If Corr(X, Y) = 0, what can we conclude?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">X and Y have no relationship whatsoever</li>
+                    <li class="quiz-option" data-value="B">X and Y are independent</li>
+                    <li class="quiz-option" data-value="C">X and Y have no linear relationship, but may have a
+                        non-linear one</li>
+                    <li class="quiz-option" data-value="D">The correlation is undefined</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 3</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

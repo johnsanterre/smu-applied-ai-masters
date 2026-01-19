@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: File I/O | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 7</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 7 Quiz: File I/O</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"r is read mode.","B":"a is append mode.","C":"Correct! w opens for writing, creating or truncating the file.","D":"x is exclusive creation."}'>
+                <h4>Q1: Which mode opens a file for writing (overwriting)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">\"r\"</li>
+                    <li class="quiz-option" data-value="B">\"a\"</li>
+                    <li class="quiz-option" data-value="C">\"w\"</li>
+                    <li class="quiz-option" data-value="D">\"x\"</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Context managers automatically close files even if exceptions occur.","B":"Files should be closed to release resources.","C":"with doesnt prevent all errors.","D":"You can still catch exceptions inside with."}'>
+                <h4>Q2: Why use \"with open()\" instead of just \"open()\"?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It automatically closes the file when done</li>
+                    <li class="quiz-option" data-value="B">Files never need to be closed</li>
+                    <li class="quiz-option" data-value="C">It prevents all file errors</li>
+                    <li class="quiz-option" data-value="D">It catches exceptions automatically</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"json module handles JSON.","B":"Correct! The csv module provides readers and writers for CSV files.","C":"file is not a standard module.","D":"text is not a standard module."}'>
+                <h4>Q3: Which module is used to read/write CSV files?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">json</li>
+                    <li class="quiz-option" data-value="B">csv</li>
+                    <li class="quiz-option" data-value="C">file</li>
+                    <li class="quiz-option" data-value="D">text</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"json.parse is JavaScript.","B":"json.read requires a file.","C":"json.decode is not standard.","D":"Correct! json.loads() parses a JSON string into Python objects."}'>
+                <h4>Q4: Which function parses a JSON string into Python objects?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">json.parse()</li>
+                    <li class="quiz-option" data-value="B">json.read()</li>
+                    <li class="quiz-option" data-value="C">json.decode()</li>
+                    <li class="quiz-option" data-value="D">json.loads()</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"os.path works but is older.","B":"path is not the preferred module.","C":"Correct! pathlib.Path provides an object-oriented interface for file paths.","D":"filepath is not standard."}'>
+                <h4>Q5: What is the modern way to handle file paths in Python?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">String concatenation</li>
+                    <li class="quiz-option" data-value="B">os.path module only</li>
+                    <li class="quiz-option" data-value="C">pathlib.Path</li>
+                    <li class="quiz-option" data-value="D">filepath module</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 7</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

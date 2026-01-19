@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discussion Topics: Expectation and Variance in Machine Learning">
+    <title>Discussion: Expectation & Variance | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 3</a>
+            <div class="navbar-subtitle">Discussion Topics</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <h1>Week 3 Discussion Topics</h1>
+            <p>Explore how expectation and variance underpin machine learning algorithms and decision-making.</p>
+
+            <div class="discussion-topic">
+                <h4>Topic 1: Expectation as a Loss Function Foundation</h4>
+                <p>Many ML loss functions are based on expected values over data distributions.</p>
+                <ul>
+                    <li>Mean Squared Error (MSE) minimizes E[(Y - Ŷ)²]. Why is this choice so common? What are its
+                        limitations?</li>
+                    <li>How does the Mean Absolute Error (MAE) differ in terms of robustness to outliers, and why?</li>
+                    <li>Cross-entropy loss can be viewed as an expectation. What is it the expectation of?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 2: The Bias-Variance Tradeoff</h4>
+                <p>Model error can be decomposed into bias, variance, and irreducible noise.</p>
+                <ul>
+                    <li>Explain intuitively why a very simple model has high bias but low variance.</li>
+                    <li>How do regularization techniques (L1, L2) affect the bias-variance tradeoff?</li>
+                    <li>In the era of deep learning, some argue the classical bias-variance tradeoff doesn't apply. What
+                        evidence supports or contradicts this?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 3: Variance in Stochastic Optimization</h4>
+                <p>Stochastic gradient descent introduces variance in gradient estimates.</p>
+                <ul>
+                    <li>Why does using mini-batches reduce the variance of gradient estimates compared to single
+                        samples?</li>
+                    <li>What is the role of techniques like momentum and Adam in managing gradient variance?</li>
+                    <li>How does variance reduction impact convergence rates and training stability?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-secondary">← Take Quiz</a>
+                <a href="../week-04/index.html" class="btn btn-primary">Week 4: Joint Distributions →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

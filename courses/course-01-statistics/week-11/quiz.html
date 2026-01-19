@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Markov Chains | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 11</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 11 Quiz: Markov Chains</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"This describes independence.","B":"Correct! Markov property: future depends only on present, not past.","C":"This would be deterministic.","D":"This describes iid sequences."}'>
+                <h4>Q1: The Markov property states that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">All states are independent</li>
+                    <li class="quiz-option" data-value="B">P(Xₙ₊₁|X₁,...,Xₙ) = P(Xₙ₊₁|Xₙ)</li>
+                    <li class="quiz-option" data-value="C">Future states are deterministic</li>
+                    <li class="quiz-option" data-value="D">Past and future are identically distributed</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Rows sum to 1, not columns.","B":"Rows sum to 1.","C":"Correct! Each row is a probability distribution over next states.","D":"Rows must sum to 1 for valid transitions."}'>
+                <h4>Q2: In a transition matrix P, each row must:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sum to the number of states</li>
+                    <li class="quiz-option" data-value="B">Be orthogonal to other rows</li>
+                    <li class="quiz-option" data-value="C">Sum to 1</li>
+                    <li class="quiz-option" data-value="D">Contain only 0s and 1s</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Stationary π satisfies πP = π.","B":"This would be an eigenvector condition.","C":"Zero rows would not be a valid distribution.","D":"Uniform is only stationary for doubly stochastic matrices."}'>
+                <h4>Q3: A stationary distribution π satisfies:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">πP = π</li>
+                    <li class="quiz-option" data-value="B">Pπ = 0</li>
+                    <li class="quiz-option" data-value="C">All entries are zero</li>
+                    <li class="quiz-option" data-value="D">π = (1/n, 1/n, ..., 1/n) always</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Irreducibility means all states communicate.","B":"Periodicity is a separate property.","C":"Absorption is a different property.","D":"Correct! Ergodic chains have unique limiting distributions."}'>
+                <h4>Q4: An ergodic Markov chain:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Has at least one absorbing state</li>
+                    <li class="quiz-option" data-value="B">Has periodic states</li>
+                    <li class="quiz-option" data-value="C">Cannot reach all states from any state</li>
+                    <li class="quiz-option" data-value="D">Has a unique stationary distribution that is the limiting
+                        distribution</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"HMMs have hidden states generating observations.","B":"Correct! HMMs add an emission model to the Markov chain.","C":"HMMs can have any number of states.","D":"HMMs have discrete time."}'>
+                <h4>Q5: A Hidden Markov Model differs from a Markov chain by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Having no hidden states</li>
+                    <li class="quiz-option" data-value="B">Having hidden states that emit observations</li>
+                    <li class="quiz-option" data-value="C">Only having two states</li>
+                    <li class="quiz-option" data-value="D">Being continuous-time</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 11</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

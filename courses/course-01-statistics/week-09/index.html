@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 9: Maximum Likelihood Estimation">
+    <title>Week 9: Maximum Likelihood Estimation | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-back">Course Home</a>
+            <div class="navbar-subtitle">Week 9: Maximum Likelihood Estimation</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <span class="badge badge-foundation">Week 9 of 15</span>
+            <h1>Maximum Likelihood Estimation</h1>
+            <p>This week covers MLE, the most widely used method for parameter estimation. Many ML models (logistic
+                regression, neural networks) are trained by maximizing likelihood.</p>
+            <h2>Learning Objectives</h2>
+            <ul class="objectives-list">
+                <li>Define and construct likelihood functions for various distributions</li>
+                <li>Apply calculus to find maximum likelihood estimates</li>
+                <li>Understand the asymptotic properties of MLEs (consistency, normality, efficiency)</li>
+                <li>Compute and interpret Fisher information</li>
+                <li>Connect MLE to loss functions in machine learning</li>
+            </ul>
+            <h2>Key Concepts</h2>
+            <div class="resources-section">
+                <ul>
+                    <li><strong>Likelihood:</strong> L(θ) = P(data|θ), probability of data given parameters</li>
+                    <li><strong>Log-likelihood:</strong> ℓ(θ) = log L(θ), easier to maximize</li>
+                    <li><strong>MLE:</strong> θ̂ = argmax L(θ)</li>
+                    <li><strong>Fisher Information:</strong> Measures information about θ in data</li>
+                    <li><strong>Cramér-Rao Bound:</strong> Lower bound on estimator variance</li>
+                </ul>
+            </div>
+            <h2>Week Resources</h2>
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-primary">Take Quiz</a>
+                <a href="discussion.html" class="btn btn-secondary">Discussion Topics</a>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <h3>Week Navigation</h3>
+            <div class="btn-group">
+                <a href="../week-08/index.html" class="btn btn-secondary">← Week 8: Hypothesis Testing</a>
+                <a href="../week-10/index.html" class="btn btn-primary">Week 10: Bayesian Inference →</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

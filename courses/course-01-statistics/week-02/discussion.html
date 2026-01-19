@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discussion Topics: Random Variables and Distributions - Applications in machine learning and data science">
+    <title>Discussion: Random Variables & Distributions | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 2</a>
+            <div class="navbar-subtitle">Discussion Topics</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card">
+            <h1>Week 2 Discussion Topics</h1>
+            <p>Explore how random variables and probability distributions are used in machine learning and AI systems.
+            </p>
+
+            <div class="discussion-topic">
+                <h4>Topic 1: The Ubiquity of the Normal Distribution</h4>
+                <p>The Normal (Gaussian) distribution appears everywhere in nature and machine learning—from measurement
+                    errors to weight initializations in neural networks.</p>
+                <ul>
+                    <li>Why do so many real-world phenomena follow approximately Normal distributions? (Hint: Think
+                        about the Central Limit Theorem, which we'll cover in Week 6)</li>
+                    <li>When might assuming Normality be dangerous or inappropriate in ML applications?</li>
+                    <li>How do neural network weight initializations (like Xavier/He initialization) leverage properties
+                        of the Normal distribution?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 2: Discrete vs. Continuous in Practice</h4>
+                <p>In theory, discrete and continuous random variables are distinct. In practice, the line often blurs.
+                </p>
+                <ul>
+                    <li>Digital computers represent all numbers discretely. Does this mean there's no such thing as a
+                        truly continuous random variable in computational practice?</li>
+                    <li>When might you model inherently discrete data (like counts) with continuous distributions? What
+                        are the trade-offs?</li>
+                    <li>How do generative AI models (like diffusion models) handle the transition between discrete
+                        tokens and continuous representations?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 3: Choosing the Right Distribution</h4>
+                <p>Selecting an appropriate distribution to model data is a critical skill in applied statistics and ML.
+                </p>
+                <ul>
+                    <li>What criteria would you use to select between Poisson, Negative Binomial, and Zero-Inflated
+                        Poisson for count data?</li>
+                    <li>In machine learning, we often use specific distributions for specific tasks (Bernoulli for
+                        binary classification, Categorical for multi-class). Why do these choices matter?</li>
+                    <li>How might misspecifying the distribution affect an ML model's predictions and uncertainty
+                        estimates?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 4: The Role of CDFs in ML</h4>
+                <p>While PDFs and PMFs get more attention, CDFs have important applications in ML and statistics.</p>
+                <ul>
+                    <li>How are CDFs used in goodness-of-fit tests like the Kolmogorov-Smirnov test?</li>
+                    <li>Quantile regression predicts conditional quantiles rather than means. How does this relate to
+                        the CDF, and when might it be preferable to standard regression?</li>
+                    <li>The inverse CDF (quantile function) is crucial for sampling. Explain how you would generate
+                        samples from any distribution given only its CDF.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-secondary">← Take Quiz</a>
+                <a href="../week-03/index.html" class="btn btn-primary">Week 3: Expectation →</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

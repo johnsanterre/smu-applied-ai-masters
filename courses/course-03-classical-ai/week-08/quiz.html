@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: CSPs | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 8</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 8 Quiz: CSPs</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"State spaces can do this too.","B":"CSPs can use heuristics.","C":"Correct! CSPs exploit constraint structure for efficient solving.","D":"All search problems do this."}'>
+                <h4>Q1: CSPs differ from standard search by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Using a goal test</li>
+                    <li class="quiz-option" data-value="B">Never using heuristics</li>
+                    <li class="quiz-option" data-value="C">Exploiting constraint structure</li>
+                    <li class="quiz-option" data-value="D">Having states and actions</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! MRV selects variable with fewest remaining values.","B":"LCV orders values.","C":"AC-3 enforces consistency.","D":"Forward checking propagates."}'>
+                <h4>Q2: MRV (Minimum Remaining Values) selects:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Variable with fewest legal values left</li>
+                    <li class="quiz-option" data-value="B">Value that rules out fewest choices</li>
+                    <li class="quiz-option" data-value="C">Arc with most constraints</li>
+                    <li class="quiz-option" data-value="D">Domain with most values</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MRV selects variables.","B":"Correct! LCV chooses value ruling out fewest neighbor values.","C":"This is backtracking.","D":"This is AC-3."}'>
+                <h4>Q3: Least Constraining Value (LCV) heuristic:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Picks variable with most constraints</li>
+                    <li class="quiz-option" data-value="B">Chooses value that rules out fewest choices for neighbors
+                    </li>
+                    <li class="quiz-option" data-value="C">Returns to previous variable on failure</li>
+                    <li class="quiz-option" data-value="D">Removes inconsistent values from domains</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"AC-3 is O(cd³) worst case.","B":"It may remove values.","C":"It processes arcs.","D":"Correct! Arc consistency ensures every value has a consistent partner."}'>
+                <h4>Q4: Arc consistency (AC-3) ensures:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">O(n) runtime</li>
+                    <li class="quiz-option" data-value="B">Domains remain unchanged</li>
+                    <li class="quiz-option" data-value="C">All constraints are satisfied</li>
+                    <li class="quiz-option" data-value="D">Every value has a consistent partner in each constraint</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Sudoku, scheduling, map coloring are classic CSPs.","B":"Pathfinding is search.","C":"Classification is ML.","D":"Regression is ML."}'>
+                <h4>Q5: Which is a classic CSP?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sudoku puzzle</li>
+                    <li class="quiz-option" data-value="B">Shortest path finding</li>
+                    <li class="quiz-option" data-value="C">Image classification</li>
+                    <li class="quiz-option" data-value="D">Linear regression</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 8</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

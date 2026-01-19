@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4: Informed Search | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="../index.html" class="navbar-back">Course Home</a>
+            <div class="navbar-subtitle">Week 4: Informed Search & Heuristics</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <span class="badge badge-foundation">Week 4 of 15</span>
+            <h1>Informed Search & Heuristics</h1>
+            <p>Harness domain knowledge through heuristics to guide search toward goals more efficiently.</p>
+            <h2>Learning Objectives</h2>
+            <ul class="objectives-list">
+                <li>Define heuristic functions and their properties</li>
+                <li>Implement greedy best-first search</li>
+                <li>Understand admissibility and consistency</li>
+                <li>Design heuristics from relaxed problems</li>
+                <li>Analyze heuristic quality and dominance</li>
+            </ul>
+            <h2>Key Concepts</h2>
+            <div class="resources-section">
+                <ul>
+                    <li><strong>h(n):</strong> Estimated cost from n to goal</li>
+                    <li><strong>Admissible:</strong> h(n) ≤ true cost (never overestimates)</li>
+                    <li><strong>Consistent:</strong> h(n) ≤ c(n,a,n') + h(n')</li>
+                    <li><strong>Dominance:</strong> h₁ dominates h₂ if h₁(n) ≥ h₂(n) for all n</li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-primary">Take Quiz</a>
+                <a href="discussion.html" class="btn btn-secondary">Discussion Topics</a>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="../week-03/index.html" class="btn btn-secondary">← Week 3</a>
+                <a href="../week-05/index.html" class="btn btn-primary">Week 5 →</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

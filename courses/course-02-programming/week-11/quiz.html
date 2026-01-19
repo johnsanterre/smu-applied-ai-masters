@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Algorithms | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 11</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 11 Quiz: Algorithms</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"O(1) is constant.","B":"O(n) is linear.","C":"Correct! O(n²) means quadratic growth.","D":"O(log n) is logarithmic."}'>
+                <h4>Q1: If an algorithm has O(n²) complexity, doubling the input size will:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Double the runtime</li>
+                    <li class="quiz-option" data-value="B">Triple the runtime</li>
+                    <li class="quiz-option" data-value="C">Quadruple the runtime</li>
+                    <li class="quiz-option" data-value="D">Increase logarithmically</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"O(n) is linear scan.","B":"Correct! Binary search halves the search space each step.","C":"O(n²) is too slow.","D":"O(1) would be direct lookup."}'>
+                <h4>Q2: What is the time complexity of binary search?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">O(n)</li>
+                    <li class="quiz-option" data-value="B">O(log n)</li>
+                    <li class="quiz-option" data-value="C">O(n²)</li>
+                    <li class="quiz-option" data-value="D">O(1)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Bubble sort is O(n²).","B":"Selection sort is O(n²).","C":"Insertion sort is O(n²).","D":"Correct! Merge sort is O(n log n) guaranteed."}'>
+                <h4>Q3: Which sorting algorithm has O(n log n) worst-case complexity?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Bubble sort</li>
+                    <li class="quiz-option" data-value="B">Selection sort</li>
+                    <li class="quiz-option" data-value="C">Insertion sort</li>
+                    <li class="quiz-option" data-value="D">Merge sort</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! A condition that stops the recursion.","B":"Thats the recursive call.","C":"Thats not special to recursion.","D":"That describes iteration."}'>
+                <h4>Q4: What is a base case in recursion?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The condition that stops recursion</li>
+                    <li class="quiz-option" data-value="B">The function calling itself</li>
+                    <li class="quiz-option" data-value="C">The return type</li>
+                    <li class="quiz-option" data-value="D">A loop that runs forever</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Space isnt measured in Big-O for time.","B":"Memory bytes vary.","C":"Correct! Space complexity measures extra memory as input grows.","D":"Variables is too specific."}'>
+                <h4>Q5: What does space complexity measure?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">How long the code is</li>
+                    <li class="quiz-option" data-value="B">Disk space used</li>
+                    <li class="quiz-option" data-value="C">Memory used as input grows</li>
+                    <li class="quiz-option" data-value="D">Number of variables</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 11</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

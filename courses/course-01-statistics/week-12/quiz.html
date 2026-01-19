@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Graphical Models | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 12</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 12 Quiz: Probabilistic Graphical Models</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Bayesian networks use directed edges.","B":"MRFs use undirected edges.","C":"Direction matters for semantics.","D":"BNs must be acyclic."}'>
+                <h4>Q1: A Bayesian network uses:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Directed acyclic graph (DAG)</li>
+                    <li class="quiz-option" data-value="B">Undirected graph</li>
+                    <li class="quiz-option" data-value="C">Either directed or undirected</li>
+                    <li class="quiz-option" data-value="D">Cyclic directed graph</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"d-separation finds conditional independence.","B":"It uses the graph structure.","C":"Correct! d-separation reads conditional independence from graph structure.","D":"No optimization involved."}'>
+                <h4>Q2: d-separation is used to determine:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Edge weights</li>
+                    <li class="quiz-option" data-value="B">Node probabilities directly</li>
+                    <li class="quiz-option" data-value="C">Conditional independence from graph structure</li>
+                    <li class="quiz-option" data-value="D">Optimal graph structure</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"BNs are directed.","B":"Correct! MRFs use undirected edges with potential functions.","C":"Both represent joint distributions.","D":"Both can be parameterized."}'>
+                <h4>Q3: A Markov Random Field differs from a Bayesian network by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Using directed edges</li>
+                    <li class="quiz-option" data-value="B">Using undirected edges</li>
+                    <li class="quiz-option" data-value="C">Not representing joint distributions</li>
+                    <li class="quiz-option" data-value="D">Having no parameters</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"We need parents, not children.","B":"Ancestors are not directly used.","C":"We need conditional on parents.","D":"Correct! P(X) = ∏ P(Xᵢ|Parents(Xᵢ))."}'>
+                <h4>Q4: The joint distribution in a Bayesian network factors as:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Product of P(Xᵢ|Children(Xᵢ))</li>
+                    <li class="quiz-option" data-value="B">Product of P(Xᵢ|Ancestors(Xᵢ))</li>
+                    <li class="quiz-option" data-value="C">Sum of all marginals</li>
+                    <li class="quiz-option" data-value="D">Product of P(Xᵢ|Parents(Xᵢ))</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Naive Bayes is a simple BN structure.","B":"Features connect to class.","C":"All features share same class parent.","D":"NB is a valid BN."}'>
+                <h4>Q5: Naive Bayes can be represented as a Bayesian network where:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Class is parent of all features, features have no edges
+                        between them</li>
+                    <li class="quiz-option" data-value="B">Features are parents of class</li>
+                    <li class="quiz-option" data-value="C">All nodes are independent</li>
+                    <li class="quiz-option" data-value="D">It cannot be represented as a BN</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 12</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

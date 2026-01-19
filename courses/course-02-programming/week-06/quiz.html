@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Dictionaries & Sets | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 6</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 6 Quiz: Dictionaries & Sets</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"O(n) is for lists.","B":"Correct! Dictionary lookup is O(1) average case due to hashing.","C":"O(log n) is for balanced trees.","D":"O(n²) is very slow."}'>
+                <h4>Q1: What is the average time complexity of dictionary lookup?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">O(n)</li>
+                    <li class="quiz-option" data-value="B">O(1)</li>
+                    <li class="quiz-option" data-value="C">O(log n)</li>
+                    <li class="quiz-option" data-value="D">O(n²)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Lists are mutable and unhashable.","B":"Dicts are mutable.","C":"Correct! Strings are immutable and hashable.","D":"Sets are mutable."}'>
+                <h4>Q2: Which can be used as a dictionary key?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">[1, 2, 3] (list)</li>
+                    <li class="quiz-option" data-value="B">{\"a\": 1} (dict)</li>
+                    <li class="quiz-option" data-value="C">\"hello\" (string)</li>
+                    <li class="quiz-option" data-value="D">{1, 2, 3} (set)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! get() returns None (or default) if key missing.","B":"[] raises KeyError if missing.","C":"find() is for strings.","D":"getitem() is the dunder method."}'>
+                <h4>Q3: What method returns None if a key doesnt exist?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">dict.get(key)</li>
+                    <li class="quiz-option" data-value="B">dict[key]</li>
+                    <li class="quiz-option" data-value="C">dict.find(key)</li>
+                    <li class="quiz-option" data-value="D">dict.getitem(key)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"{1, 2, 3} - duplicates removed.","B":"Not ordered by input.","C":"Values must be unique in sets.","D":"Correct! Sets contain only unique elements: {1, 2, 3}."}'>
+                <h4>Q4: What is set([1, 2, 2, 3, 3, 3])?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">[1, 2, 2, 3, 3, 3]</li>
+                    <li class="quiz-option" data-value="B">{3, 2, 1}</li>
+                    <li class="quiz-option" data-value="C">{1, 2, 2, 3, 3, 3}</li>
+                    <li class="quiz-option" data-value="D">{1, 2, 3}</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Union includes all elements.","B":"Correct! Intersection returns common elements: {2, 3}.","C":"Difference removes second from first.","D":"XOR returns non-shared elements."}'>
+                <h4>Q5: What is {1, 2, 3} & {2, 3, 4}?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">{1, 2, 3, 4}</li>
+                    <li class="quiz-option" data-value="B">{2, 3}</li>
+                    <li class="quiz-option" data-value="C">{1}</li>
+                    <li class="quiz-option" data-value="D">{1, 4}</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 6</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

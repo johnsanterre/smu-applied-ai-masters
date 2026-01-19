@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discussion Topics: Sampling and Central Limit Theorem">
+    <title>Discussion: Sampling & CLT | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 6</a>
+            <div class="navbar-subtitle">Discussion Topics</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 6 Discussion Topics</h1>
+            <p>Explore the implications of the CLT for modern machine learning and AI.</p>
+
+            <div class="discussion-topic">
+                <h4>Topic 1: The CLT and Batch Size in Deep Learning</h4>
+                <p>Batch size is a critical hyperparameter, and its effects relate directly to the CLT.</p>
+                <ul>
+                    <li>How does batch size affect gradient noise, and what are the tradeoffs between large and small
+                        batches?</li>
+                    <li>Some research suggests small batches lead to better generalization. How might gradient noise
+                        contribute to this?</li>
+                    <li>What is "gradient accumulation" and how does it interact with CLT principles?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 2: When the CLT Fails</h4>
+                <p>The CLT requires finite variance, which is not always satisfied.</p>
+                <ul>
+                    <li>What happens with heavy-tailed distributions (like Cauchy) that have infinite variance?</li>
+                    <li>How might fat tails in financial returns affect ML models trained on such data?</li>
+                    <li>What alternatives exist when CLT assumptions are violated?</li>
+                </ul>
+            </div>
+
+            <div class="discussion-topic">
+                <h4>Topic 3: Bootstrap Methods</h4>
+                <p>Bootstrap resampling is a computational alternative to CLT-based inference.</p>
+                <ul>
+                    <li>When might bootstrap be preferred over CLT-based confidence intervals?</li>
+                    <li>How does the bootstrap relate to the LLN and CLT conceptually?</li>
+                    <li>What are the limitations of bootstrap in small samples?</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="btn-group">
+                <a href="quiz.html" class="btn btn-secondary">← Take Quiz</a>
+                <a href="../week-07/index.html" class="btn btn-primary">Week 7: Estimation →</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

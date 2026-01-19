@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Quiz: Random Variables and Distributions - Test your knowledge of PMF, PDF, CDF, and common distributions">
+    <title>Quiz: Random Variables & Distributions | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 2</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card">
+            <h1>Week 2 Quiz: Random Variables & Distributions</h1>
+            <p>Test your understanding of random variables, probability mass/density functions, and common
+                distributions.</p>
+
+            <!-- Question 1 -->
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "A PMF value P(X=x) directly gives the probability of that specific value. A PDF value f(x) is a density, not a probability—you need to integrate to get probabilities.",
+                "B": "Correct! For continuous random variables, the probability of any single exact value is zero: P(X = x) = 0. We can only assign non-zero probabilities to intervals. The PDF gives a density that must be integrated over an interval to yield probability.",
+                "C": "Both PMF and PDF are always non-negative. For PMF, values sum to 1; for PDF, the integral over all values equals 1.",
+                "D": "Both are ways to describe probability distributions. A PMF is for discrete variables; a PDF is for continuous variables. They serve analogous purposes in their respective domains."
+            }'>
+                <h4>Question 1: What is the key difference between a PMF and a PDF?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">PMF values are probabilities; PDF values must be integrated
+                        to get probabilities</li>
+                    <li class="quiz-option" data-value="B">For a PDF, P(X = x) = 0 for any specific value x; for a PMF,
+                        P(X = x) can be positive</li>
+                    <li class="quiz-option" data-value="C">PMF can be negative while PDF must be non-negative</li>
+                    <li class="quiz-option" data-value="D">PDF describes random variables; PMF describes deterministic
+                        outcomes</li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The Binomial distribution is for counting successes in a fixed number of trials, not for modeling time between events.",
+                "B": "The Normal distribution can take negative values and is typically used for continuous measurements with symmetric variation, not time-to-event data.",
+                "C": "Correct! The Exponential distribution models the time between events in a Poisson process. It has the memoryless property: the probability of waiting another t minutes is the same regardless of how long you have already waited.",
+                "D": "The Poisson distribution counts the number of events in a fixed interval, not the time between events. However, if arrivals follow a Poisson process, the time between arrivals is Exponential."
+            }'>
+                <h4>Question 2: Customer arrivals at a store follow a Poisson process. Which distribution models the
+                    time between consecutive arrivals?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Binomial</li>
+                    <li class="quiz-option" data-value="B">Normal</li>
+                    <li class="quiz-option" data-value="C">Exponential</li>
+                    <li class="quiz-option" data-value="D">Poisson</li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! The CDF F(x) = P(X ≤ x), and for continuous distributions, P(X < x) = P(X ≤ x). So P(X > 2) = 1 - P(X ≤ 2) = 1 - F(2) = 1 - 0.7 = 0.3.",
+                "B": "0.7 is F(2) = P(X ≤ 2), which is the probability X is less than or equal to 2, not greater than 2.",
+                "C": "There is no reason to halve the value. The complement relationship gives us the direct answer.",
+                "D": "0.5 would be correct if the median were at 2 for a symmetric distribution, but we are given F(2) = 0.7, so the calculation is straightforward."
+            }'>
+                <h4>Question 3: If the CDF of X is F(x), and F(2) = 0.7, what is P(X > 2)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">0.3</li>
+                    <li class="quiz-option" data-value="B">0.7</li>
+                    <li class="quiz-option" data-value="C">0.35</li>
+                    <li class="quiz-option" data-value="D">0.5</li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "n is the number of trials (emails received), not the probability of success.",
+                "B": "p is the probability of success on each trial (probability each email is spam), and n is the number of trials.",
+                "C": "p should be the spam probability (0.3), not the non-spam probability. Also, n is the total trials, not successes.",
+                "D": "Correct! The Binomial distribution Binomial(n, p) models the number of successes in n independent trials, each with success probability p. Here, n=20 emails and p=0.3 (probability each is spam)."
+            }'>
+                <h4>Question 4: You receive 20 emails, and each independently has a 30% chance of being spam. The number
+                    of spam emails has which distribution?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Binomial(20, 20)</li>
+                    <li class="quiz-option" data-value="B">Binomial(0.3, 20)</li>
+                    <li class="quiz-option" data-value="C">Binomial(20, 0.7)</li>
+                    <li class="quiz-option" data-value="D">Binomial(20, 0.3)</li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "While the PDF can exceed 1 at some points (since it is a density, not a probability), values cannot be negative.",
+                "B": "Correct! A valid PDF must satisfy: (1) f(x) ≥ 0 for all x, and (2) the integral of f(x) over all x equals 1. The height at any point can exceed 1, as long as the total area under the curve is 1.",
+                "C": "The PDF does not need to be bounded; it can be unbounded (like the Normal PDF as we approach its peak for very small variance). What matters is the integral equals 1.",
+                "D": "f(x) values are not probabilities—they are densities. Probabilities only come from integrating the PDF over an interval."
+            }'>
+                <h4>Question 5: Which statement about probability density functions is TRUE?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">f(x) can be negative for some values of x</li>
+                    <li class="quiz-option" data-value="B">f(x) ≥ 0 for all x, and ∫f(x)dx = 1</li>
+                    <li class="quiz-option" data-value="C">f(x) must always be less than or equal to 1</li>
+                    <li class="quiz-option" data-value="D">f(x) gives the probability that X equals x</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 2</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

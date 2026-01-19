@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Variables & Types | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 2</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 2 Quiz: Variables, Types & Operators</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"3.14 has a decimal, making it a float.","B":"Correct! 3.14 is a floating-point number (float).","C":"Strings require quotes.","D":"Bool is True/False only."}'>
+                <h4>Q1: What is the type of 3.14 in Python?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">int</li>
+                    <li class="quiz-option" data-value="B">float</li>
+                    <li class="quiz-option" data-value="C">str</li>
+                    <li class="quiz-option" data-value="D">bool</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"/ performs true division in Python 3.","B":"// is integer division: 7 // 2 = 3.","C":"Correct! In Python 3, / always returns a float: 7 / 2 = 3.5.","D":"Division of integers is defined in Python."}'>
+                <h4>Q2: What is 7 / 2 in Python 3?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">3</li>
+                    <li class="quiz-option" data-value="B">3.0</li>
+                    <li class="quiz-option" data-value="C">3.5</li>
+                    <li class="quiz-option" data-value="D">Error</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"+ concatenates strings, not adds numerically.","B":"Strings dont subtract.","C":"No multiplication with +.","D":"Correct! + with strings concatenates: \"hello\" + \"world\" = \"helloworld\"."}'>
+                <h4>Q3: What is \"hello\" + \"world\"?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Error</li>
+                    <li class="quiz-option" data-value="B">\"hello - world\"</li>
+                    <li class="quiz-option" data-value="C">\"hello * world\"</li>
+                    <li class="quiz-option" data-value="D">\"helloworld\"</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! == compares equality and returns a boolean.","B":"= is assignment, not comparison.","C":"This is greater-than comparison.","D":"!= checks inequality."}'>
+                <h4>Q4: Which operator checks if two values are equal?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">==</li>
+                    <li class="quiz-option" data-value="B">=</li>
+                    <li class="quiz-option" data-value="C">></li>
+                    <li class="quiz-option" data-value="D">!=</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"int(\"42\") returns integer 42.","B":"Correct! int() converts the string to integer 42.","C":"No concatenation happens here.","D":"This is valid Python code."}'>
+                <h4>Q5: What does int(\"42\") return?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">\"42\"</li>
+                    <li class="quiz-option" data-value="B">42</li>
+                    <li class="quiz-option" data-value="C">\"int42\"</li>
+                    <li class="quiz-option" data-value="D">Error</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 2</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

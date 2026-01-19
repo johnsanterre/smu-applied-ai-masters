@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Review | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 15</a>
+            <div class="navbar-subtitle">Final Review</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 15: Comprehensive Review Quiz</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"UCS uses path cost.","B":"BFS explores level by level.","C":"Correct! A* uses f(n) = g(n) + h(n).","D":"Greedy uses only h(n)."}'>
+                <h4>Q1: Which search uses f(n) = g(n) + h(n)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Uniform-cost search</li>
+                    <li class="quiz-option" data-value="B">Breadth-first search</li>
+                    <li class="quiz-option" data-value="C">A* search</li>
+                    <li class="quiz-option" data-value="D">Greedy best-first search</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Modus ponens.","B":"Correct! Resolution can derive any entailed sentence.","C":"Forward chaining.","D":"Backward chaining."}'>
+                <h4>Q2: Which inference method is complete for propositional logic?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Modus ponens alone</li>
+                    <li class="quiz-option" data-value="B">Resolution</li>
+                    <li class="quiz-option" data-value="C">Forward chaining only</li>
+                    <li class="quiz-option" data-value="D">Backward chaining only</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! MRV chooses variable with fewest remaining values.","B":"LCV orders values.","C":"AC-3 enforces consistency.","D":"Degree heuristic uses constraints."}'>
+                <h4>Q3: In CSP solving, MRV heuristic selects:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Variable with fewest legal values</li>
+                    <li class="quiz-option" data-value="B">Value ruling out fewest choices</li>
+                    <li class="quiz-option" data-value="C">Arc with most constraints</li>
+                    <li class="quiz-option" data-value="D">Variable with most constraints</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Both are search.","B":"Both can be optimal.","C":"Both explore states.","D":"Correct! Minimax handles adversarial opponents."}'>
+                <h4>Q4: Minimax differs from regular search by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Not using states</li>
+                    <li class="quiz-option" data-value="B">Finding suboptimal solutions</li>
+                    <li class="quiz-option" data-value="C">Avoiding search entirely</li>
+                    <li class="quiz-option" data-value="D">Assuming an adversarial opponent</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Policy maps to actions.","B":"Value function is expected reward.","C":"Correct! Bellman relates state value to successor values.","D":"Discount controls time preference."}'>
+                <h4>Q5: The Bellman equation defines:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The optimal policy directly</li>
+                    <li class="quiz-option" data-value="B">Transition probabilities</li>
+                    <li class="quiz-option" data-value="C">Value function recursively</li>
+                    <li class="quiz-option" data-value="D">The discount factor</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 15</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Joint Distributions and Independence">
+    <title>Quiz: Joint Distributions & Independence | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 4</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <h1>Week 4 Quiz: Joint Distributions & Independence</h1>
+            <p>Test your understanding of joint, marginal, and conditional distributions.</p>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "This is the definition of the marginal distribution of X, summing over all values of Y.",
+                "B": "Correct! The marginal P(Y) is obtained by summing the joint probability over all possible values of X: P(Y=y) = Σₓ P(X=x, Y=y).",
+                "C": "This is dividing joint by marginal, which gives a conditional distribution, not a marginal.",
+                "D": "This is multiplying marginals, which would give the joint distribution only if X and Y are independent."
+            }'>
+                <h4>Question 1: How do you compute the marginal distribution P(Y) from the joint distribution P(X, Y)?
+                </h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">P(X) = Σᵧ P(X, Y)</li>
+                    <li class="quiz-option" data-value="B">P(Y) = Σₓ P(X, Y)</li>
+                    <li class="quiz-option" data-value="C">P(Y) = P(X, Y) / P(X)</li>
+                    <li class="quiz-option" data-value="D">P(Y) = P(X) × P(Y)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! Two random variables are independent if and only if their joint distribution equals the product of their marginals for ALL values: P(X=x, Y=y) = P(X=x)P(Y=y) for all x, y.",
+                "B": "This is the definition of conditional probability, not independence. Independence is about the joint factoring into marginals.",
+                "C": "Zero covariance means no linear relationship, but variables can still be dependent (e.g., Y = X²).",
+                "D": "This describes identical distributions, which is unrelated to independence."
+            }'>
+                <h4>Question 2: X and Y are independent if and only if:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">P(X, Y) = P(X) × P(Y) for all values</li>
+                    <li class="quiz-option" data-value="B">P(Y|X) = P(Y) × P(X)</li>
+                    <li class="quiz-option" data-value="C">Cov(X, Y) = 0</li>
+                    <li class="quiz-option" data-value="D">P(X) = P(Y)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "This is the joint probability, not the conditional. Conditional probability divides by the conditioning event probability.",
+                "B": "0.3 would be P(X=1) from marginalizing, but we want P(Y=1|X=1).",
+                "C": "Correct! P(Y=1|X=1) = P(X=1, Y=1) / P(X=1) = 0.2 / (0.2 + 0.1) = 0.2 / 0.3 = 2/3 ≈ 0.67.",
+                "D": "0.5 would suggest the conditional equals the marginal, which is not the case here."
+            }'>
+                <h4>Question 3: Given the joint PMF table where P(X=1, Y=1)=0.2, P(X=1, Y=0)=0.1, P(X=0, Y=1)=0.3,
+                    P(X=0, Y=0)=0.4, what is P(Y=1|X=1)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">0.2</li>
+                    <li class="quiz-option" data-value="B">0.3</li>
+                    <li class="quiz-option" data-value="C">0.67</li>
+                    <li class="quiz-option" data-value="D">0.5</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "The covariance matrix is symmetric (Σᵢⱼ = Σⱼᵢ), not diagonal unless variables are uncorrelated.",
+                "B": "The covariance matrix must be positive semi-definite, not negative definite.",
+                "C": "Off-diagonal elements represent covariances between different variables, which can be non-zero.",
+                "D": "Correct! The multivariate Normal is completely described by its mean vector μ and covariance matrix Σ. All marginals and conditionals are also Normal."
+            }'>
+                <h4>Question 4: Which statement about the multivariate Normal distribution is TRUE?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The covariance matrix must be diagonal</li>
+                    <li class="quiz-option" data-value="B">The covariance matrix must be negative definite</li>
+                    <li class="quiz-option" data-value="C">Off-diagonal covariance elements must be zero</li>
+                    <li class="quiz-option" data-value="D">It is fully characterized by its mean vector and covariance
+                        matrix</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "The Naive Bayes assumption simplifies the model but is rarely true in real data. Features often have dependencies.",
+                "B": "Correct! Naive Bayes assumes features are conditionally independent given the class label: P(X₁, X₂, ..., Xₙ | Y) = ∏ P(Xᵢ | Y). This allows the joint to factor into products.",
+                "C": "Independence of features and class would mean features carry no information about the class, making classification impossible.",
+                "D": "Naive Bayes does use prior probabilities P(Y), so it is not prior-free."
+            }'>
+                <h4>Question 5: What assumption does the Naive Bayes classifier make about features?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Features are marginally independent</li>
+                    <li class="quiz-option" data-value="B">Features are conditionally independent given the class</li>
+                    <li class="quiz-option" data-value="C">Features are independent of the class label</li>
+                    <li class="quiz-option" data-value="D">No prior probability is needed</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 4</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

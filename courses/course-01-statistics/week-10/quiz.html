@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Bayesian Inference | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 10</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 10 Quiz: Bayesian Inference</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"A prior matching the likelihood family.","B":"A prior with zero variance.","C":"Correct! Conjugate priors yield posteriors in the same family.","D":"Priors can be informative or uninformative."}'>
+                <h4>Q1: A conjugate prior is one that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Matches the likelihood family</li>
+                    <li class="quiz-option" data-value="B">Has zero variance</li>
+                    <li class="quiz-option" data-value="C">Produces a posterior in the same family as the prior</li>
+                    <li class="quiz-option" data-value="D">Is always uninformative</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MLE ignores the prior.","B":"Correct! MAP = argmax P(θ|D) = argmax P(D|θ)P(θ). Its MLE with a prior.","C":"MAP is a point estimate, not full posterior.","D":"MAP = posterior mode, not mean."}'>
+                <h4>Q2: MAP estimation differs from MLE by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Ignoring the data</li>
+                    <li class="quiz-option" data-value="B">Including the prior in the optimization</li>
+                    <li class="quiz-option" data-value="C">Computing the full posterior</li>
+                    <li class="quiz-option" data-value="D">Using the posterior mean</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! 95% credible interval has 95% posterior probability of containing θ.","B":"This is frequentist interpretation.","C":"This is coverage of data, not parameter.","D":"Credible intervals are Bayesian."}'>
+                <h4>Q3: A 95% Bayesian credible interval means:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">95% posterior probability θ is in the interval</li>
+                    <li class="quiz-option" data-value="B">95% of such intervals contain θ over repeated sampling</li>
+                    <li class="quiz-option" data-value="C">95% of data falls in the interval</li>
+                    <li class="quiz-option" data-value="D">Confidence level of 95%</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Both use prior and likelihood.","B":"L2 = Gaussian prior, L1 = Laplace prior.","C":"Both regularization types have Bayesian interpretations.","D":"Correct! L2 regularization corresponds to Gaussian prior on weights."}'>
+                <h4>Q4: L2 regularization in linear regression corresponds to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Uniform prior on weights</li>
+                    <li class="quiz-option" data-value="B">Laplace prior on weights</li>
+                    <li class="quiz-option" data-value="C">No prior (pure MLE)</li>
+                    <li class="quiz-option" data-value="D">Gaussian prior on weights</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Posterior predictive averages over θ.","B":"It uses the posterior, not just prior.","C":"Correct! P(x_new|data) = ∫P(x_new|θ)P(θ|data)dθ.","D":"It accounts for both data and parameter uncertainty."}'>
+                <h4>Q5: The posterior predictive distribution:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Uses only the MAP estimate</li>
+                    <li class="quiz-option" data-value="B">Ignores the observed data</li>
+                    <li class="quiz-option" data-value="C">Integrates predictions over the posterior</li>
+                    <li class="quiz-option" data-value="D">Is identical to the likelihood</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 10</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

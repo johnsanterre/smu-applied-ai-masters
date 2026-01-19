@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Uninformed Search | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 3</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 3 Quiz: Uninformed Search</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"DFS may not find shortest.","B":"Correct! BFS finds shortest path in unweighted graphs.","C":"IDS finds shortest but slower.","D":"Bidirectional is complete but complex."}'>
+                <h4>Q1: Which search finds the shortest path (fewest actions)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Depth-First Search</li>
+                    <li class="quiz-option" data-value="B">Breadth-First Search</li>
+                    <li class="quiz-option" data-value="C">Iterative Deepening</li>
+                    <li class="quiz-option" data-value="D">Bidirectional Search</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"BFS uses O(b^d).","B":"DFS uses O(bd).","C":"Correct! IDS repeats work but uses O(bd) space like DFS.","D":"They differ in space."}'>
+                <h4>Q2: Iterative deepening search has the space complexity of:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">BFS</li>
+                    <li class="quiz-option" data-value="B">A*</li>
+                    <li class="quiz-option" data-value="C">DFS</li>
+                    <li class="quiz-option" data-value="D">All are the same</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! DFS can loop forever in infinite state spaces.","B":"BFS is complete.","C":"UCS is complete with positive costs.","D":"IDS is complete."}'>
+                <h4>Q3: Which search is NOT complete in infinite state spaces?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">DFS</li>
+                    <li class="quiz-option" data-value="B">BFS</li>
+                    <li class="quiz-option" data-value="C">UCS</li>
+                    <li class="quiz-option" data-value="D">IDS</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"BFS uses queue (FIFO).","B":"DFS uses stack (LIFO).","C":"UCS uses priority queue by g(n).","D":"Correct! UCS expands lowest cumulative cost first."}'>
+                <h4>Q4: Uniform-cost search expands nodes in order of:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">First discovered</li>
+                    <li class="quiz-option" data-value="B">Last discovered</li>
+                    <li class="quiz-option" data-value="C">Random order</li>
+                    <li class="quiz-option" data-value="D">Lowest path cost g(n)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Time is O(b^d) for both.","B":"Correct! BFS stores entire frontier which grows exponentially.","C":"Both explore same states asymptotically.","D":"Problem difficulty is external."}'>
+                <h4>Q5: Why is BFS impractical for deep solutions?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Time complexity is too high</li>
+                    <li class="quiz-option" data-value="B">Memory (space) grows exponentially</li>
+                    <li class="quiz-option" data-value="C">It finds suboptimal solutions</li>
+                    <li class="quiz-option" data-value="D">It only works on easy problems</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 3</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

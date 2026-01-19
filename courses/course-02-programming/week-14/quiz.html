@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Git | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 14</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 14 Quiz: Git</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"add stages changes.","B":"Correct! git commit saves staged changes.","C":"push uploads to remote.","D":"save is not git command."}'>
+                <h4>Q1: Which command saves staged changes to history?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">git add</li>
+                    <li class="quiz-option" data-value="B">git commit</li>
+                    <li class="quiz-option" data-value="C">git push</li>
+                    <li class="quiz-option" data-value="D">git save</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"init creates new repo.","B":"clone copies remote.","C":"Correct! git branch creates new branch.","D":"checkout switches branches."}'>
+                <h4>Q2: How do you create a new branch?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">git init branch-name</li>
+                    <li class="quiz-option" data-value="B">git clone branch-name</li>
+                    <li class="quiz-option" data-value="C">git branch branch-name</li>
+                    <li class="quiz-option" data-value="D">git checkout branch-name</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Merging overlapping changes causes conflicts.","B":"Push doesnt cause conflicts directly.","C":"Clone doesnt cause conflicts.","D":"Conflicts do occur."}'>
+                <h4>Q3: What causes a merge conflict?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Same lines changed in different branches</li>
+                    <li class="quiz-option" data-value="B">Pushing to remote</li>
+                    <li class="quiz-option" data-value="C">Cloning a repository</li>
+                    <li class="quiz-option" data-value="D">Conflicts never happen</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"add stages files.","B":"commit saves locally.","C":"status shows state.","D":"Correct! git push uploads to remote."}'>
+                <h4>Q4: What uploads commits to GitHub?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">git add</li>
+                    <li class="quiz-option" data-value="B">git commit</li>
+                    <li class="quiz-option" data-value="C">git status</li>
+                    <li class="quiz-option" data-value="D">git push</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"log shows history.","B":"Correct! git pull fetches and merges remote changes.","C":"fetch only downloads.","D":"merge combines branches."}'>
+                <h4>Q5: How do you get latest changes from remote?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">git log</li>
+                    <li class="quiz-option" data-value="B">git pull</li>
+                    <li class="quiz-option" data-value="C">git fetch</li>
+                    <li class="quiz-option" data-value="D">git merge</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 14</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

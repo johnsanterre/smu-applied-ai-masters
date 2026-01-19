@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Information Theory | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 14</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 14 Quiz: Information Theory</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Entropy requires probability.","B":"Correct! H(X) = -Σp(x)log p(x) measures uncertainty.","C":"This is expected value.","D":"This is variance."}'>
+                <h4>Q1: Entropy H(X) is defined as:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Σ x × P(x)</li>
+                    <li class="quiz-option" data-value="B">-Σ P(x) log P(x)</li>
+                    <li class="quiz-option" data-value="C">Σ x × log P(x)</li>
+                    <li class="quiz-option" data-value="D">Σ (x - μ)²P(x)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Cross-entropy is about two distributions.","B":"This is H(P) + H(Q).","C":"Correct! Cross-entropy = entropy + KL divergence.","D":"H(P,Q) ≥ H(P), not less."}'>
+                <h4>Q2: Cross-entropy H(P,Q) relates to entropy as:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">H(P,Q) = H(P) always</li>
+                    <li class="quiz-option" data-value="B">H(P,Q) = H(P) + H(Q)</li>
+                    <li class="quiz-option" data-value="C">H(P,Q) = H(P) + D_KL(P||Q)</li>
+                    <li class="quiz-option" data-value="D">H(P,Q) < H(P) always</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! KL(P||P) = 0 since log(1) = 0.","B":"KL is always ≥ 0.","C":"1 is not special for KL.","D":"KL = 0 iff P = Q."}'>
+                <h4>Q3: KL divergence D_KL(P||Q) equals zero when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">P = Q (distributions are identical)</li>
+                    <li class="quiz-option" data-value="B">P and Q are independent</li>
+                    <li class="quiz-option" data-value="C">Both distributions are uniform</li>
+                    <li class="quiz-option" data-value="D">Never equals zero</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"MI is symmetric: I(X;Y) = I(Y;X).","B":"MI can be positive.","C":"MI = 0 iff independent.","D":"Correct! MI measures shared information between X and Y."}'>
+                <h4>Q4: Mutual information I(X;Y) measures:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The entropy of X times entropy of Y</li>
+                    <li class="quiz-option" data-value="B">Always negative values</li>
+                    <li class="quiz-option" data-value="C">Zero for all distributions</li>
+                    <li class="quiz-option" data-value="D">How much knowing Y reduces uncertainty about X</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MSE is for Gaussian assumptions.","B":"Correct! Cross-entropy is the standard classification loss.","C":"Hinge loss is for SVMs.","D":"Cross-entropy is used for both."}'>
+                <h4>Q5: In classification, cross-entropy loss is used because:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It assumes Gaussian outputs</li>
+                    <li class="quiz-option" data-value="B">It is the negative log-likelihood for categorical outputs
+                    </li>
+                    <li class="quiz-option" data-value="C">It is equivalent to hinge loss</li>
+                    <li class="quiz-option" data-value="D">It only works for binary classification</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 14</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

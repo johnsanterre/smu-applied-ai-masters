@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Error Handling | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 9</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 9 Quiz: Error Handling</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"try contains code that might raise.","B":"except handles the exception.","C":"Correct! finally always executes, for cleanup.","D":"catch is not Python keyword."}'>
+                <h4>Q1: Which block always executes, whether an exception occurs or not?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">try</li>
+                    <li class="quiz-option" data-value="B">except</li>
+                    <li class="quiz-option" data-value="C">finally</li>
+                    <li class="quiz-option" data-value="D">catch</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! KeyError is raised when a dictionary key is not found.","B":"IndexError is for sequences.","C":"ValueError is for wrong value.","D":"TypeError is for wrong type."}'>
+                <h4>Q2: What exception is raised when accessing a non-existent dictionary key?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">KeyError</li>
+                    <li class="quiz-option" data-value="B">IndexError</li>
+                    <li class="quiz-option" data-value="C">ValueError</li>
+                    <li class="quiz-option" data-value="D">TypeError</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"throw is JavaScript.","B":"Correct! raise is used to throw exceptions in Python.","C":"except catches exceptions.","D":"error is not a keyword."}'>
+                <h4>Q3: Which keyword is used to throw an exception?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">throw</li>
+                    <li class="quiz-option" data-value="B">raise</li>
+                    <li class="quiz-option" data-value="C">except</li>
+                    <li class="quiz-option" data-value="D">error</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"print statements work but are verbose.","B":"Commenting is tedious.","C":"Guessing is inefficient.","D":"Correct! pdb is Pythons interactive debugger."}'>
+                <h4>Q4: What is pdb?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Python Database</li>
+                    <li class="quiz-option" data-value="B">Print Debug Base</li>
+                    <li class="quiz-option" data-value="C">Program Data Buffer</li>
+                    <li class="quiz-option" data-value="D">Python Debugger</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Bare except catches everything including SystemExit.","B":"It catches too much.","C":"It does catch exceptions.","D":"It is valid but bad practice."}'>
+                <h4>Q5: Why is \"except:\" (bare except) considered bad practice?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It catches all exceptions including system ones</li>
+                    <li class="quiz-option" data-value="B">It catches too few exceptions</li>
+                    <li class="quiz-option" data-value="C">It doesnt catch anything</li>
+                    <li class="quiz-option" data-value="D">It causes syntax errors</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 9</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

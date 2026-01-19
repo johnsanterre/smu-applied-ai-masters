@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Quiz: Foundations of Probability - Test your knowledge of sample spaces, events, and probability axioms">
+    <title>Quiz: Foundations of Probability | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 1</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card">
+            <h1>Week 1 Quiz: Foundations of Probability</h1>
+            <p>Test your understanding of sample spaces, events, probability axioms, and counting principles. Click on
+                an answer to check if you're correct.</p>
+
+            <!-- Question 1 -->
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "An event is actually a subset of the sample space, not a single outcome. A single outcome is called an elementary event or sample point.",
+                "B": "The probability of an event is a number between 0 and 1, not the event itself. The event is the set of outcomes we are measuring.",
+                "C": "Correct! An event is any subset of the sample space. It can contain zero, one, or multiple outcomes. For example, when rolling a die, \"rolling an even number\" is the event {2, 4, 6}.",
+                "D": "This describes the sample space, not an event. The sample space is the universal set of all outcomes; events are subsets of it."
+            }'>
+                <h4>Question 1: What is an event in probability theory?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">A single outcome from an experiment</li>
+                    <li class="quiz-option" data-value="B">The probability of something happening</li>
+                    <li class="quiz-option" data-value="C">A subset of the sample space</li>
+                    <li class="quiz-option" data-value="D">The set of all possible outcomes</li>
+                </ul>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "This is the normalization axiom, which states P(Ω) = 1. The non-negativity axiom addresses individual event probabilities.",
+                "B": "Correct! The non-negativity axiom states that for any event A, P(A) ≥ 0. Probabilities cannot be negative, which aligns with our intuition about measuring likelihood.",
+                "C": "This describes the additivity axiom for mutually exclusive events, not the non-negativity axiom.",
+                "D": "This is a property derived from the axioms (called the complement rule), but it is not the non-negativity axiom itself."
+            }'>
+                <h4>Question 2: Which statement correctly describes the non-negativity axiom?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The probability of the entire sample space equals 1</li>
+                    <li class="quiz-option" data-value="B">For any event A, P(A) ≥ 0</li>
+                    <li class="quiz-option" data-value="C">P(A ∪ B) = P(A) + P(B) for mutually exclusive events</li>
+                    <li class="quiz-option" data-value="D">P(A) + P(A') = 1</li>
+                </ul>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "This would be correct if we were selecting WITH replacement, but the problem states five different numbers, implying selection without replacement.",
+                "B": "This calculates 40 × 5!, which does not correctly represent the lottery scenario.",
+                "C": "This would be 40!/(40-5)!, representing permutations where order matters. In lotteries, the order of selection typically does not matter.",
+                "D": "Correct! Since order does not matter and we are selecting without replacement, we use combinations: C(40,5) = 40!/(5!(40-5)!) = 40!/(5!35!) = 658,008 different lottery combinations."
+            }'>
+                <h4>Question 3: A lottery requires selecting 5 different numbers from 1 to 40. How many different
+                    lottery tickets are possible?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">40^5</li>
+                    <li class="quiz-option" data-value="B">40 × 5!</li>
+                    <li class="quiz-option" data-value="C">40!/(40-5)!</li>
+                    <li class="quiz-option" data-value="D">40!/(5!(40-5)!)</li>
+                </ul>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! Two events are mutually exclusive if they cannot both occur simultaneously, meaning their intersection is empty: A ∩ B = ∅. For example, getting heads and tails on a single coin flip.",
+                "B": "This describes independent events, not mutually exclusive events. Independence means the occurrence of one doesnt affect the probability of the other.",
+                "C": "This describes events that together make up the entire sample space (exhaustive events), which is a different concept from mutual exclusivity.",
+                "D": "This describes complementary events specifically. While complements are mutually exclusive, not all mutually exclusive events are complements."
+            }'>
+                <h4>Question 4: Events A and B are mutually exclusive. Which statement is true?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">A ∩ B = ∅ (empty set)</li>
+                    <li class="quiz-option" data-value="B">P(A|B) = P(A)</li>
+                    <li class="quiz-option" data-value="C">A ∪ B = Ω</li>
+                    <li class="quiz-option" data-value="D">P(A) = 1 - P(B)</li>
+                </ul>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "Students often mistakenly add probabilities: 0.6 + 0.5 = 1.1, but this exceeds 1 and ignores the overlap between events.",
+                "B": "0.5 is just P(B). The union requires accounting for both events while avoiding double-counting the intersection.",
+                "C": "Correct! Using the addition rule: P(A ∪ B) = P(A) + P(B) - P(A ∩ B) = 0.6 + 0.5 - 0.3 = 0.8. We subtract the intersection to avoid counting it twice.",
+                "D": "0.3 is P(A ∩ B), the probability both occur, not the probability that at least one occurs."
+            }'>
+                <h4>Question 5: If P(A) = 0.6, P(B) = 0.5, and P(A ∩ B) = 0.3, what is P(A ∪ B)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">1.1</li>
+                    <li class="quiz-option" data-value="B">0.5</li>
+                    <li class="quiz-option" data-value="C">0.8</li>
+                    <li class="quiz-option" data-value="D">0.3</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 1</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

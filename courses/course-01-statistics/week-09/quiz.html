@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: MLE | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 9</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 9 Quiz: Maximum Likelihood Estimation</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Log converts products to sums.","B":"Correct! Log converts products to sums, making optimization easier.","C":"Log preserves argmax.","D":"Log-likelihood can be negative."}'>
+                <h4>Q1: Why use log-likelihood instead of likelihood?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Log converts products to quotients</li>
+                    <li class="quiz-option" data-value="B">Log converts products to sums, easier to optimize</li>
+                    <li class="quiz-option" data-value="C">Log changes the maximum location</li>
+                    <li class="quiz-option" data-value="D">Log-likelihood is always larger</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"This is sample variance.","B":"Median minimizes L1 loss.","C":"Correct! MLE of μ for Normal is sample mean.","D":"Max is MLE for uniform upper bound."}'>
+                <h4>Q2: For Normal(μ, σ²) data, MLE of μ is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sample variance</li>
+                    <li class="quiz-option" data-value="B">Sample median</li>
+                    <li class="quiz-option" data-value="C">Sample mean</li>
+                    <li class="quiz-option" data-value="D">Maximum observation</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Higher I means lower variance.","B":"I relates to variance, not bias.","C":"Var = 1/I, not I.","D":"Correct! Cramér-Rao: Var(MLE) ≥ 1/I(θ)."}'>
+                <h4>Q3: Fisher information I(θ) relates to MLE variance via:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Higher I means higher variance</li>
+                    <li class="quiz-option" data-value="B">I determines bias</li>
+                    <li class="quiz-option" data-value="C">Var = I exactly</li>
+                    <li class="quiz-option" data-value="D">Var ≥ 1/I (Cramér-Rao bound)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Cross-entropy = negative log-likelihood for Bernoulli.","B":"MSE is for Gaussian.","C":"Hinge is for SVMs.","D":"We minimize CE = maximize likelihood."}'>
+                <h4>Q4: Minimizing cross-entropy in logistic regression equals:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Maximizing Bernoulli likelihood</li>
+                    <li class="quiz-option" data-value="B">Maximizing Normal likelihood</li>
+                    <li class="quiz-option" data-value="C">Minimizing hinge loss</li>
+                    <li class="quiz-option" data-value="D">Minimizing likelihood</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MLE may be biased in finite samples.","B":"Correct! Consistent, asymptotically normal, asymptotically efficient.","C":"Not uniformly in finite samples.","D":"Properties are asymptotic."}'>
+                <h4>Q5: MLEs have which asymptotic properties?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Always unbiased</li>
+                    <li class="quiz-option" data-value="B">Consistent, asymptotically normal and efficient</li>
+                    <li class="quiz-option" data-value="C">Uniformly minimum variance</li>
+                    <li class="quiz-option" data-value="D">Best small-sample properties</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 9</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+        <p><a href="../../../index.html">Program Home</a></p>
+    </footer>
+</body>
+
+</html>

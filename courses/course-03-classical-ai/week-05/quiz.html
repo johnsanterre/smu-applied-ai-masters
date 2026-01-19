@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: A* Search | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 5</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 5 Quiz: A* Search</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"g(n) alone is UCS.","B":"h(n) alone is greedy.","C":"Correct! A* uses f(n) = g(n) + h(n).","D":"Not the average."}'>
+                <h4>Q1: A* evaluates nodes using:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">f(n) = g(n)</li>
+                    <li class="quiz-option" data-value="B">f(n) = h(n)</li>
+                    <li class="quiz-option" data-value="C">f(n) = g(n) + h(n)</li>
+                    <li class="quiz-option" data-value="D">f(n) = (g(n) + h(n)) / 2</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Consistency implies admissibility and ensures optimality.","B":"Admissibility alone suffices for tree search.","C":"Dominance is about efficiency.","D":"Zero heuristic makes it UCS."}'>
+                <h4>Q2: For graph search, A* is optimal when h is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Consistent (monotonic)</li>
+                    <li class="quiz-option" data-value="B">Admissible only</li>
+                    <li class="quiz-option" data-value="C">Dominant</li>
+                    <li class="quiz-option" data-value="D">Zero everywhere</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"A* expands all nodes with f < optimal.","B":"Correct! A* expands minimum nodes for any admissible heuristic.","C":"Greedy is faster but not optimal.","D":"IDS expands more nodes than A*."}'>
+                <h4>Q3: A* is \"optimally efficient\" meaning:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It uses optimal memory</li>
+                    <li class="quiz-option" data-value="B">No algorithm expands fewer nodes for the same h</li>
+                    <li class="quiz-option" data-value="C">It runs faster than greedy search</li>
+                    <li class="quiz-option" data-value="D">It always finds solution immediately</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Both are memory-bounded.","B":"SMA* uses fixed memory.","C":"IDA* uses depth cutoffs.","D":"Correct! IDA* uses iterative deepening with f-cost limits."}'>
+                <h4>Q4: IDA* differs from A* by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Using a different heuristic</li>
+                    <li class="quiz-option" data-value="B">Being incomplete</li>
+                    <li class="quiz-option" data-value="C">Not using any heuristic</li>
+                    <li class="quiz-option" data-value="D">Using iterative deepening on f-cost</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! A* stores all generated nodes, growing exponentially.","B":"Time is often manageable.","C":"CPU is not the bottleneck.","D":"Heuristics can be computed fast."}'>
+                <h4>Q5: The main limitation of A* is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Memory: stores all nodes in frontier and explored</li>
+                    <li class="quiz-option" data-value="B">Time complexity is exponential</li>
+                    <li class="quiz-option" data-value="C">Requires excessive CPU</li>
+                    <li class="quiz-option" data-value="D">Cannot use heuristics efficiently</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 5</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Point and Interval Estimation">
+    <title>Quiz: Estimation | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 7</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 7 Quiz: Point & Interval Estimation</h1>
+            <p>Test your understanding of estimation theory and confidence intervals.</p>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "An unbiased estimator has E[θ̂] = θ on average, but any individual estimate may be far from θ.",
+                "B": "Correct! An unbiased estimator is one whose expected value equals the true parameter: E[θ̂] = θ. On average, it neither overestimates nor underestimates.",
+                "C": "Consistency is about convergence to the true value with increasing sample size, not about bias.",
+                "D": "Efficiency is about having minimum variance among unbiased estimators, a separate property."
+            }'>
+                <h4>Question 1: An estimator θ̂ is unbiased if:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">θ̂ always equals θ</li>
+                    <li class="quiz-option" data-value="B">E[θ̂] = θ</li>
+                    <li class="quiz-option" data-value="C">θ̂ → θ as n → ∞</li>
+                    <li class="quiz-option" data-value="D">Var(θ̂) is minimized</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "Bias² does appear, but variance is in the numerator too, not the denominator.",
+                "B": "Variance and bias are added, not subtracted, in the MSE decomposition.",
+                "C": "Correct! MSE = E[(θ̂ - θ)²] = Var(θ̂) + [Bias(θ̂)]². This decomposition shows that estimation error comes from both random variation and systematic bias.",
+                "D": "There is no 2× coefficient in the MSE decomposition."
+            }'>
+                <h4>Question 2: Mean Squared Error (MSE) decomposes as:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Variance / Bias²</li>
+                    <li class="quiz-option" data-value="B">Variance - Bias²</li>
+                    <li class="quiz-option" data-value="C">Variance + Bias²</li>
+                    <li class="quiz-option" data-value="D">2 × Variance × Bias</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! The frequentist interpretation: if we repeated the sampling and interval construction many times, 95% of those intervals would contain the true parameter. Any single interval either contains θ or does not—there is no 95% probability.",
+                "B": "This is the Bayesian credible interval interpretation, not the frequentist confidence interval.",
+                "C": "This is incorrect—we already observed the sample, so the data are fixed.",
+                "D": "Confidence levels work the same regardless of sample size; larger n just gives narrower intervals."
+            }'>
+                <h4>Question 3: What does a 95% confidence interval mean?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">95% of similarly constructed intervals would contain the true
+                        parameter</li>
+                    <li class="quiz-option" data-value="B">There is a 95% probability the parameter is in this specific
+                        interval</li>
+                    <li class="quiz-option" data-value="C">95% of the data falls within the interval</li>
+                    <li class="quiz-option" data-value="D">The interval is only valid for samples of size at least 95
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "Widening the interval increases coverage probability, not decreases it.",
+                "B": "Increasing sample size narrows the interval while maintaining the same confidence level.",
+                "C": "The standard error decreases with more data, which would narrow the interval if the multiplier stayed constant.",
+                "D": "Correct! Increasing confidence (e.g., 95% to 99%) requires a larger multiplier in the interval formula, which widens the interval."
+            }'>
+                <h4>Question 4: To increase confidence level from 95% to 99%, the interval width must:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Decrease</li>
+                    <li class="quiz-option" data-value="B">Stay the same</li>
+                    <li class="quiz-option" data-value="C">Increase by exactly 4%</li>
+                    <li class="quiz-option" data-value="D">Increase</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "The t-distribution has heavier tails than Normal, not lighter.",
+                "B": "Correct! Student' s t-distribution is used when estimating the mean with unknown population
+                variance. The sample standard deviation introduces additional uncertainty, requiring wider
+                intervals.", "C" : "High degrees of freedom make t approach Normal, so the distinction diminishes."
+                , "D" : "The t-distribution approaches Normal as df → ∞, not the other way around." }'>
+                <h4>Question 5: When should you use the t-distribution instead of the Normal for a confidence interval?
+                </h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">When the population is known to be Normal</li>
+                    <li class="quiz-option" data-value="B">When the population variance is unknown and sample size is
+                        small</li>
+                    <li class="quiz-option" data-value="C">When degrees of freedom exceed 100</li>
+                    <li class="quiz-option" data-value="D">When the Normal distribution does not fit the data</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 7</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

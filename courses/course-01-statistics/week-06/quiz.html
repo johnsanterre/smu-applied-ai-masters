@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Sampling and Central Limit Theorem">
+    <title>Quiz: Sampling & CLT | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 6</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 6 Quiz: Sampling & Central Limit Theorem</h1>
+            <p>Test your understanding of sampling distributions and the Central Limit Theorem.</p>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The CLT does not require the population to be Normal. It works for any distribution with finite variance.",
+                "B": "The CLT applies to sample means specifically, though it generalizes to other statistics under certain conditions.",
+                "C": "Correct! The CLT states that the distribution of sample means approaches Normal as sample size increases, regardless of the population distribution (given finite variance).",
+                "D": "The sample size must be sufficiently large for the CLT to apply. The exact threshold depends on how non-Normal the population is."
+            }'>
+                <h4>Question 1: The Central Limit Theorem states that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">All populations are normally distributed</li>
+                    <li class="quiz-option" data-value="B">Individual observations become Normal with large samples</li>
+                    <li class="quiz-option" data-value="C">The distribution of sample means approaches Normal as sample
+                        size increases</li>
+                    <li class="quiz-option" data-value="D">Sample size does not matter for Normal approximations</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "10/√100 = 10/10 = 1, but this describes one standard error, not the sampling distribution variance.",
+                "B": "Correct! The standard error of the mean is σ/√n = 10/√100 = 10/10 = 1. The sampling distribution has mean μ and standard deviation σ/√n.",
+                "C": "10 is the population standard deviation, not the standard error of the sample mean.",
+                "D": "√10 ≈ 3.16 does not correspond to the correct formula."
+            }'>
+                <h4>Question 2: If a population has σ = 10 and you take samples of size n = 100, what is the standard
+                    error of the sample mean?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">0.1</li>
+                    <li class="quiz-option" data-value="B">1</li>
+                    <li class="quiz-option" data-value="C">10</li>
+                    <li class="quiz-option" data-value="D">√10</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! To halve the standard error (σ/√n), you need to quadruple n because √(4n) = 2√n. So 400 = 4 × 100.",
+                "B": "Doubling n only reduces the standard error by a factor of √2 ≈ 1.41, not 2.",
+                "C": "This would only reduce the standard error by √(150/100) ≈ 1.22.",
+                "D": "Halving n would actually double the standard error, not reduce it."
+            }'>
+                <h4>Question 3: If you want to reduce the standard error by half, how should you change the sample size
+                    from n = 100?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Increase to n = 400</li>
+                    <li class="quiz-option" data-value="B">Increase to n = 200</li>
+                    <li class="quiz-option" data-value="C">Increase to n = 150</li>
+                    <li class="quiz-option" data-value="D">Decrease to n = 50</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "This describes the Central Limit Theorem (convergence in distribution), not the LLN.",
+                "B": "Both forms of LLN are about convergence of the sample mean, not individual observations.",
+                "C": "The variance decreases, but this is not the LLN itself.",
+                "D": "Correct! The Law of Large Numbers states that the sample mean X̄ converges to the population mean μ as sample size increases. This justifies using sample statistics to estimate population parameters."
+            }'>
+                <h4>Question 4: The Law of Large Numbers guarantees that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sample means become normally distributed</li>
+                    <li class="quiz-option" data-value="B">Individual observations converge to the mean</li>
+                    <li class="quiz-option" data-value="C">Sample variance approaches zero</li>
+                    <li class="quiz-option" data-value="D">Sample mean converges to population mean as n → ∞</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The CLT is extremely important for training—it underlies why mini-batch gradients provide useful estimates.",
+                "B": "Higher n (batch size) reduces variance in gradient estimates, improving stability.",
+                "C": "Correct! Mini-batch gradient descent uses the CLT: the average gradient over a batch approximates the true gradient, and larger batches have smaller variance (by a factor of 1/√n).",
+                "D": "The CLT applies regardless of the loss function. The function being optimized does not need to be Normal."
+            }'>
+                <h4>Question 5: How does the CLT relate to mini-batch gradient descent in deep learning?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The CLT is irrelevant to neural network training</li>
+                    <li class="quiz-option" data-value="B">Larger batch sizes increase gradient variance</li>
+                    <li class="quiz-option" data-value="C">Mini-batch gradients approximate true gradients with variance
+                        ∝ 1/batch_size</li>
+                    <li class="quiz-option" data-value="D">The CLT only applies if the loss function is Normal</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 6</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

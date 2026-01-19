@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Conditional Probability and Bayes' Theorem">
+    <title>Quiz: Conditional Probability & Bayes' Theorem | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 5</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card">
+            <h1>Week 5 Quiz: Conditional Probability & Bayes' Theorem</h1>
+            <p>Test your understanding of Bayes' theorem and conditional probability reasoning.</p>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "The likelihood P(positive|disease) = 0.95 is NOT the probability of having the disease. This is the classic base rate fallacy.",
+                "B": "Correct! Using Bayes theorem: P(D|+) = P(+|D)P(D) / P(+). P(+) = P(+|D)P(D) + P(+|no D)P(no D) = 0.95×0.01 + 0.05×0.99 = 0.0095 + 0.0495 = 0.059. So P(D|+) = 0.0095/0.059 ≈ 0.16 or 16%.",
+                "C": "50% would suggest no prior information matters, but the low base rate (1%) strongly affects the posterior.",
+                "D": "1% is the prior probability before the test. A positive test does increase this, but not as much as intuition suggests due to the low base rate."
+            }'>
+                <h4>Question 1: A disease affects 1% of the population. A test is 95% sensitive (detects 95% of true
+                    cases) and 95% specific (5% false positive rate). If a person tests positive, what is the
+                    probability they have the disease?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">95%</li>
+                    <li class="quiz-option" data-value="B">About 16%</li>
+                    <li class="quiz-option" data-value="C">50%</li>
+                    <li class="quiz-option" data-value="D">1%</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The prior P(θ) represents our belief before seeing data, not after.",
+                "B": "The likelihood P(D|θ) is the probability of data given parameters, not a probability distribution over parameters.",
+                "C": "Correct! Bayes theorem: P(θ|D) ∝ P(D|θ)P(θ). In words: Posterior ∝ Likelihood × Prior. The posterior is proportional to the product of likelihood and prior.",
+                "D": "While the evidence P(D) appears in the denominator, it acts as a normalizing constant. The key relationship is that posterior is proportional to likelihood times prior."
+            }'>
+                <h4>Question 2: In Bayesian inference, the posterior distribution is proportional to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Prior only</li>
+                    <li class="quiz-option" data-value="B">Likelihood only</li>
+                    <li class="quiz-option" data-value="C">Likelihood × Prior</li>
+                    <li class="quiz-option" data-value="D">Evidence / Prior</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! The law of total probability: P(B) = Σᵢ P(B|Aᵢ)P(Aᵢ) where {Aᵢ} partition the sample space. This computes the marginal by summing over all ways B can occur.",
+                "B": "This is just a sum of conditional probabilities without weighting by the partition probabilities.",
+                "C": "This is just a sum of the partition probabilities, which equals 1, not P(B).",
+                "D": "This is a product, not a weighted sum. The law of total probability involves summing products."
+            }'>
+                <h4>Question 3: The law of total probability states that if {A₁, A₂, ..., Aₙ} partition the sample
+                    space, then P(B) = ?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Σᵢ P(B|Aᵢ)P(Aᵢ)</li>
+                    <li class="quiz-option" data-value="B">Σᵢ P(B|Aᵢ)</li>
+                    <li class="quiz-option" data-value="C">Σᵢ P(Aᵢ)</li>
+                    <li class="quiz-option" data-value="D">P(B|A₁) × P(A₁)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "If P(A|B) = P(A), knowing B gives no information about A. This is the definition of independence, not what we want.",
+                "B": "P(A|B) = P(B) would be unusual and unrelated to the concept of informative conditioning.",
+                "C": "P(A|B) = 1 means B guarantees A, which is a very special case.",
+                "D": "Correct! When P(A|B) ≠ P(A), knowing B changes our assessment of A probability. This means B provides information about A—the essence of useful conditioning and Bayesian updating."
+            }'>
+                <h4>Question 4: What does it mean when P(A|B) ≠ P(A)?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">A and B are independent</li>
+                    <li class="quiz-option" data-value="B">A and B are mutually exclusive</li>
+                    <li class="quiz-option" data-value="C">A is certain given B</li>
+                    <li class="quiz-option" data-value="D">B provides information about A</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "An uninformative prior (like uniform) lets the data dominate, not strengthening toward 50-50.",
+                "B": "Correct! A strong prior encodes strong prior beliefs. If we are 99% sure before seeing data, we need overwhelming evidence to change our mind. The posterior will be pulled toward the prior.",
+                "C": "Complex posteriors can arise from many factors, not specifically from strong priors.",
+                "D": "Strong priors typically make computation similar or simpler, often leading to conjugate posteriors."
+            }'>
+                <h4>Question 5: If you use a very strong (informative) prior in Bayesian inference:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The posterior will always be 50-50</li>
+                    <li class="quiz-option" data-value="B">The posterior will be heavily influenced by the prior,
+                        requiring more data to overcome</li>
+                    <li class="quiz-option" data-value="C">The posterior becomes more complex</li>
+                    <li class="quiz-option" data-value="D">Computation becomes intractable</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 5</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

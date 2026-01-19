@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: NumPy | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 12</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 12 Quiz: NumPy</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Lists are mixed type.","B":"Correct! NumPy arrays are homogeneous, enabling fast operations.","C":"Both are ordered.","D":"NumPy has many methods."}'>
+                <h4>Q1: What is key difference between NumPy arrays and Python lists?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Lists are faster</li>
+                    <li class="quiz-option" data-value="B">NumPy arrays have fixed type, enabling vectorization</li>
+                    <li class="quiz-option" data-value="C">Lists are ordered</li>
+                    <li class="quiz-option" data-value="D">NumPy has no methods</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"This creates zeros.","B":"This creates ones.","C":"Correct! np.arange creates sequences like range.","D":"This generates random."}'>
+                <h4>Q2: Which creates an array [0, 1, 2, 3, 4]?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">np.zeros(5)</li>
+                    <li class="quiz-option" data-value="B">np.ones(5)</li>
+                    <li class="quiz-option" data-value="C">np.arange(5)</li>
+                    <li class="quiz-option" data-value="D">np.random.rand(5)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Broadcasting stretches smaller array to match shapes.","B":"Thats concatenation.","C":"Thats reshaping.","D":"Thats slicing."}'>
+                <h4>Q3: What is broadcasting?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Automatic shape expansion for element-wise operations</li>
+                    <li class="quiz-option" data-value="B">Combining arrays end-to-end</li>
+                    <li class="quiz-option" data-value="C">Converting to different dimensions</li>
+                    <li class="quiz-option" data-value="D">Selecting specific elements</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"+ adds element-wise.","B":"& is bitwise and.","C":"* multiplies element-wise.","D":"Correct! @ is matrix multiplication operator."}'>
+                <h4>Q4: What operator performs matrix multiplication?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">+</li>
+                    <li class="quiz-option" data-value="B">&</li>
+                    <li class="quiz-option" data-value="C">*</li>
+                    <li class="quiz-option" data-value="D">@</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"shape returns dimensions.","B":"Correct! reshape changes dimensions without copying data.","C":"resize modifies in place.","D":"transform isnt standard."}'>
+                <h4>Q5: What does arr.reshape(3, 4) do?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Returns the shape</li>
+                    <li class="quiz-option" data-value="B">Returns array with new dimensions (3 rows, 4 cols)</li>
+                    <li class="quiz-option" data-value="C">Deletes elements</li>
+                    <li class="quiz-option" data-value="D">Transposes the array</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 12</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

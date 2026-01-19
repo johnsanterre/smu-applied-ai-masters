@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz: Hypothesis Testing">
+    <title>Quiz: Hypothesis Testing | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 8</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 8 Quiz: Hypothesis Testing</h1>
+            <p>Test your understanding of hypothesis testing and p-values.</p>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "The p-value is NOT the probability H₀ is true. This is a very common misconception. P-values are computed assuming H₀ is true.",
+                "B": "Statistical significance does not imply practical importance. A tiny effect can be significant with enough data.",
+                "C": "Correct! The p-value is the probability of observing data as extreme as (or more extreme than) what was observed, given that the null hypothesis is true. It measures how surprising the data is under H₀.",
+                "D": "A small p-value does not prove the alternative is true; it simply suggests the data is unlikely under H₀."
+            }'>
+                <h4>Question 1: A p-value of 0.03 means:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">There is a 3% probability the null hypothesis is true</li>
+                    <li class="quiz-option" data-value="B">The effect is 97% likely to be important</li>
+                    <li class="quiz-option" data-value="C">If H₀ were true, theres a 3% chance of seeing data this
+                        extreme</li>
+                    <li class="quiz-option" data-value="D">The alternative hypothesis is proven correct</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B" data-explanations='{
+                "A": "Type I error is rejecting H₀ when its true (false positive), not accepting it when false.",
+                "B": "Correct! Type I error = false positive = rejecting a true null hypothesis. The significance level α is the maximum acceptable Type I error rate.",
+                "C": "This describes Type II error (failing to reject false H₀).",
+                "D": "This describes getting the answer right, not an error."
+            }'>
+                <h4>Question 2: A Type I error occurs when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">We fail to reject a true null hypothesis</li>
+                    <li class="quiz-option" data-value="B">We reject a true null hypothesis</li>
+                    <li class="quiz-option" data-value="C">We fail to reject a false null hypothesis</li>
+                    <li class="quiz-option" data-value="D">We correctly reject a false null hypothesis</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D" data-explanations='{
+                "A": "An insignificant result cannot prove the null; it may reflect insufficient power.",
+                "B": "Marginal p-values still carry weight; they do not mean the results are meaningless.",
+                "C": "Researchers may legitimately disagree on effect sizes and sample requirements before a study.",
+                "D": "Correct! Power depends on sample size, effect size, and significance level. Larger samples and larger effects increase power. Low power studies often fail to detect real effects."
+            }'>
+                <h4>Question 3: Statistical power is increased by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Using a smaller sample size</li>
+                    <li class="quiz-option" data-value="B">Using a more stringent significance level (e.g., 0.01 instead
+                        of 0.05)</li>
+                    <li class="quiz-option" data-value="C">Reducing the effect size</li>
+                    <li class="quiz-option" data-value="D">Increasing sample size or effect size</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A" data-explanations='{
+                "A": "Correct! Running more tests increases the chance of at least one false positive. Corrections like Bonferroni (α/m) or FDR control address this.",
+                "B": "More tests mean more chances for error, not fewer.",
+                "C": "Multiple testing affects the interpretation of individual p-values.",
+                "D": "This describes effect size requirements, not multiple testing issues."
+            }'>
+                <h4>Question 4: The multiple testing problem refers to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Increased Type I error rate when running many tests</li>
+                    <li class="quiz-option" data-value="B">Decreased Type I error rate with more tests</li>
+                    <li class="quiz-option" data-value="C">Tests becoming more accurate with replication</li>
+                    <li class="quiz-option" data-value="D">The need for larger effects in medical studies</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C" data-explanations='{
+                "A": "Failing to reject means we do not have enough evidence to reject, not that H₀ is true.",
+                "B": "This is also too strong a claim based on frequentist testing alone.",
+                "C": "Correct! In frequentist testing, failing to reject means insufficient evidence against H₀. We cannot conclude H₀ is true or that the claim is false—only that the data does not provide strong enough evidence to reject.",
+                "D": "Failing to reject with p=0.12 and α=0.05 is a valid statistical outcome."
+            }'>
+                <h4>Question 5: If p = 0.12 and α = 0.05, we should conclude:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The null hypothesis is true</li>
+                    <li class="quiz-option" data-value="B">The alternative hypothesis is false</li>
+                    <li class="quiz-option" data-value="C">We fail to reject H₀; insufficient evidence against it</li>
+                    <li class="quiz-option" data-value="D">The test was conducted incorrectly</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 8</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering | Masters in Applied Artificial Intelligence</p>
+        <p><a href="../../../index.html">Program Home</a> | <a href="../index.html">Course Home</a></p>
+    </footer>
+</body>
+
+</html>

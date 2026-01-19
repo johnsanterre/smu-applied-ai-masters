@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Control Flow | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 3</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 3 Quiz: Control Flow & Logic</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"True and False = False.","B":"True or False = True.","C":"Correct! not reverses the boolean: not True = False.","D":"True and True = True."}'>
+                <h4>Q1: What is the value of: not True</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">True</li>
+                    <li class="quiz-option" data-value="B">1</li>
+                    <li class="quiz-option" data-value="C">False</li>
+                    <li class="quiz-option" data-value="D">Error</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"range(5) goes 0-4, not 1-5.","B":"Correct! range(5) = 0, 1, 2, 3, 4. Loop runs 5 times.","C":"range(5) is 5 elements.","D":"Loop definitely runs."}'>
+                <h4>Q2: How many times does this loop run: for i in range(5)</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">4 times</li>
+                    <li class="quiz-option" data-value="B">5 times</li>
+                    <li class="quiz-option" data-value="C">6 times</li>
+                    <li class="quiz-option" data-value="D">0 times</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! break immediately exits the loop.","B":"continue skips to next iteration.","C":"pass does nothing.","D":"return exits a function."}'>
+                <h4>Q3: Which keyword exits a loop immediately?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">break</li>
+                    <li class="quiz-option" data-value="B">continue</li>
+                    <li class="quiz-option" data-value="C">pass</li>
+                    <li class="quiz-option" data-value="D">return</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"5 > 3 is True, but we need both conditions true.","B":"5 < 3 is False, so the whole expression is False.","C":"and requires both operands to be True.","D":"Correct! 5 > 3 is True, 5 < 3 is False. True and False = False."}'>
+                <h4>Q4: What is: (5 > 3) and (5 < 3)</h4>
+                        <ul class="quiz-options">
+                            <li class="quiz-option" data-value="A">True</li>
+                            <li class="quiz-option" data-value="B">5</li>
+                            <li class="quiz-option" data-value="C">3</li>
+                            <li class="quiz-option" data-value="D">False</li>
+                        </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"The condition never becomes False.","B":"Only one print before the issue.","C":"Correct! The condition is always True, so the loop never ends.","D":"Loops are valid Python."}'>
+                <h4>Q5: What happens with: while True: print(\"Hi\")</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Prints \"Hi\" once</li>
+                    <li class="quiz-option" data-value="B">Prints \"Hi\" twice</li>
+                    <li class="quiz-option" data-value="C">Infinite loop (prints forever)</li>
+                    <li class="quiz-option" data-value="D">Syntax error</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 3</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

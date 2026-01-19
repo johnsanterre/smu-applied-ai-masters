@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Monte Carlo | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 13</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 13 Quiz: Monte Carlo Methods</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Variance decreases as 1/n.","B":"Rate is O(1/√n) for std error.","C":"Correct! MC error decreases as 1/√n regardless of dimension.","D":"Convergence is probabilistic, can be slow."}'>
+                <h4>Q1: Monte Carlo integration error decreases at rate:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">O(1/n)</li>
+                    <li class="quiz-option" data-value="B">O(1/n²)</li>
+                    <li class="quiz-option" data-value="C">O(1/√n)</li>
+                    <li class="quiz-option" data-value="D">Does not converge</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"We only need ratios of target.","B":"Correct! MH only requires target up to normalizing constant.","C":"Proposal can be different from target.","D":"Any valid proposal works."}'>
+                <h4>Q2: Metropolis-Hastings requires knowing the target distribution:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Exactly, including normalizing constant</li>
+                    <li class="quiz-option" data-value="B">Up to a normalizing constant</li>
+                    <li class="quiz-option" data-value="C">Only at a single point</li>
+                    <li class="quiz-option" data-value="D">The proposal must match target</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Gibbs samples each variable from its conditional.","B":"Gibbs uses conditionals.","C":"Gibbs is a special MH case.","D":"Gibbs has implicit acceptance."}'>
+                <h4>Q3: Gibbs sampling works by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Sampling each variable from its full conditional distribution
+                    </li>
+                    <li class="quiz-option" data-value="B">Sampling all variables jointly</li>
+                    <li class="quiz-option" data-value="C">Using gradient information</li>
+                    <li class="quiz-option" data-value="D">Rejecting most proposals</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Burn-in removes initial transient.","B":"Low autocorrelation means more independent samples.","C":"Multiple chains help detect convergence issues.","D":"Correct! All are important diagnostics."}'>
+                <h4>Q4: MCMC convergence diagnostics include:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Burn-in period removal</li>
+                    <li class="quiz-option" data-value="B">Autocorrelation analysis</li>
+                    <li class="quiz-option" data-value="C">Running multiple chains</li>
+                    <li class="quiz-option" data-value="D">All of the above</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Rejection sampling rejects samples.","B":"Correct! Importance sampling reweights samples from proposal.","C":"Gibbs is not importance sampling.","D":"IS uses weighted samples."}'>
+                <h4>Q5: Importance sampling works by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Rejecting samples that dont match target</li>
+                    <li class="quiz-option" data-value="B">Sampling from proposal and reweighting by importance weights
+                    </li>
+                    <li class="quiz-option" data-value="C">Iteratively updating conditional distributions</li>
+                    <li class="quiz-option" data-value="D">Using unweighted samples from target</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 13</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

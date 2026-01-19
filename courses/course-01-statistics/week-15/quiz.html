@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Review Quiz | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 15</a>
+            <div class="navbar-subtitle">Final Review</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 15: Comprehensive Review Quiz</h1>
+            <p>Test your mastery of key concepts from the entire course.</p>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"This is frequentist interpretation.","B":"All data has some probability under any hypothesis.","C":"Correct! Bayesian: posterior ∝ likelihood × prior.","D":"MAP uses the mode, not mean."}'>
+                <h4>Q1: Bayes theorem relates posterior to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">P-value and significance level</li>
+                    <li class="quiz-option" data-value="B">Sample mean and variance</li>
+                    <li class="quiz-option" data-value="C">Likelihood times prior</li>
+                    <li class="quiz-option" data-value="D">Mean squared error</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"CLT is about sample means.","B":"Correct! CLT: sample mean distribution → Normal as n → ∞.","C":"Data distribution remains unchanged.","D":"Population can be any distribution."}'>
+                <h4>Q2: The Central Limit Theorem states that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">All distributions are Normal</li>
+                    <li class="quiz-option" data-value="B">Sample mean distribution approaches Normal</li>
+                    <li class="quiz-option" data-value="C">Data becomes more Normal with larger samples</li>
+                    <li class="quiz-option" data-value="D">Only Normal populations can be sampled</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Cross-entropy is for classification.","B":"MSE has Gaussian likelihood justification.","C":"Regularization adds prior information.","D":"Correct! All are validated by probabilistic reasoning."}'>
+                <h4>Q3: Which ML concept has a probabilistic interpretation?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Cross-entropy loss</li>
+                    <li class="quiz-option" data-value="B">Mean squared error</li>
+                    <li class="quiz-option" data-value="C">L2 regularization</li>
+                    <li class="quiz-option" data-value="D">All of the above</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! MLE finds θ maximizing P(data|θ).","B":"This is posterior maximization (MAP).","C":"This is least squares.","D":"This is not MLE."}'>
+                <h4>Q4: Maximum Likelihood Estimation finds θ that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Maximizes P(data|θ)</li>
+                    <li class="quiz-option" data-value="B">Maximizes P(θ|data)</li>
+                    <li class="quiz-option" data-value="C">Minimizes Σ(y - ŷ)²</li>
+                    <li class="quiz-option" data-value="D">Minimizes entropy</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Correlation 0 does not imply independence.","B":"They could have non-linear relationships.","C":"Correct! Uncorrelated ≠ independent (classic counterexample: Y = X²).","D":"Correlation alone cannot determine this."}'>
+                <h4>Q5: If Cov(X,Y) = 0, we can conclude:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">X and Y are independent</li>
+                    <li class="quiz-option" data-value="B">X and Y have no relationship</li>
+                    <li class="quiz-option" data-value="C">X and Y have no linear relationship</li>
+                    <li class="quiz-option" data-value="D">X causes Y</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 15</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

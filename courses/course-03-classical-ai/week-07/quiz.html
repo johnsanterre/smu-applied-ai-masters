@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Game Theory | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 7</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 7 Quiz: Adversarial Search</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Minimax assumes optimal opponent, maximizes worst-case.","B":"Random opponent is expectimax.","C":"Single player is regular search.","D":"Only scoring is evaluation."}'>
+                <h4>Q1: Minimax assumes the opponent:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Plays optimally to minimize your score</li>
+                    <li class="quiz-option" data-value="B">Plays randomly</li>
+                    <li class="quiz-option" data-value="C">Does not affect the outcome</li>
+                    <li class="quiz-option" data-value="D">Only cares about their own score</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"It still finds optimal move.","B":"It can still prune.","C":"Correct! Alpha-beta prunes branches that cant affect final decision.","D":"Order affects efficiency."}'>
+                <h4>Q2: Alpha-beta pruning improves minimax by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Finding a better solution</li>
+                    <li class="quiz-option" data-value="B">Using less memory</li>
+                    <li class="quiz-option" data-value="C">Cutting off branches that wont affect the decision</li>
+                    <li class="quiz-option" data-value="D">Ignoring move ordering</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Alpha is for MAX.","B":"Correct! Beta is the minimum score MIN is assured of.","C":"Depth is separate.","D":"Branching is separate."}'>
+                <h4>Q3: In alpha-beta, beta represents:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Best value for MAX found so far</li>
+                    <li class="quiz-option" data-value="B">Best value for MIN found so far</li>
+                    <li class="quiz-option" data-value="C">Maximum depth reached</li>
+                    <li class="quiz-option" data-value="D">Branching factor</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Evaluations estimate utility.","B":"This would defeat purpose.","C":"Perfect evaluation is impossible.","D":"Correct! Evaluation functions estimate utility when search is cut off."}'>
+                <h4>Q4: Evaluation functions are used to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Replace minimax entirely</li>
+                    <li class="quiz-option" data-value="B">Search deeper in the tree</li>
+                    <li class="quiz-option" data-value="C">Guarantee optimal play</li>
+                    <li class="quiz-option" data-value="D">Estimate utility at non-terminal states</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! MCTS uses random playouts to estimate state values.","B":"Minimax is deterministic.","C":"CSP is for constraints.","D":"Planning is for action sequences."}'>
+                <h4>Q5: Monte Carlo Tree Search (MCTS):</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Uses random simulations to evaluate positions</li>
+                    <li class="quiz-option" data-value="B">Is identical to minimax</li>
+                    <li class="quiz-option" data-value="C">Only works for CSPs</li>
+                    <li class="quiz-option" data-value="D">Requires a planning domain</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 7</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

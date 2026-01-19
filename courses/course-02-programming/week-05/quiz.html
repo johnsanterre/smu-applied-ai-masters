@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Lists & Tuples | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 5</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 5 Quiz: Lists & Tuples</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Lists are mutable; tuples are immutable.","B":"Opposite: lists use [], tuples use ().","C":"Both are ordered.","D":"Both can hold any type."}'>
+                <h4>Q1: What is the main difference between lists and tuples?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Lists are mutable; tuples are immutable</li>
+                    <li class="quiz-option" data-value="B">Lists use (); tuples use []</li>
+                    <li class="quiz-option" data-value="C">Tuples are ordered; lists are not</li>
+                    <li class="quiz-option" data-value="D">Lists can only hold numbers</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Index 0 is \"a\".","B":"Index 1 is \"b\".","C":"Correct! Python uses 0-indexing, so index 2 is \"c\".","D":"Index 3 is \"d\"."}'>
+                <h4>Q2: What is [\"a\", \"b\", \"c\", \"d\"][2]?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">\"a\"</li>
+                    <li class="quiz-option" data-value="B">\"b\"</li>
+                    <li class="quiz-option" data-value="C">\"c\"</li>
+                    <li class="quiz-option" data-value="D">\"d\"</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"This is [0:4].","B":"Correct! [1:3] includes indices 1 and 2 (exclusive of 3).","C":"This is [1:4].","D":"This is [2:4]."}'>
+                <h4>Q3: What is [10, 20, 30, 40][1:3]?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">[10, 20, 30, 40]</li>
+                    <li class="quiz-option" data-value="B">[20, 30]</li>
+                    <li class="quiz-option" data-value="C">[20, 30, 40]</li>
+                    <li class="quiz-option" data-value="D">[30, 40]</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"add() is for sets.","B":"insert requires position.","C":"push is not a list method.","D":"Correct! append() adds to the end of a list."}'>
+                <h4>Q4: Which method adds an element to the end of a list?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">add()</li>
+                    <li class="quiz-option" data-value="B">insert()</li>
+                    <li class="quiz-option" data-value="C">push()</li>
+                    <li class="quiz-option" data-value="D">append()</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! List comprehension [x**2 for x in range(5)] creates [0, 1, 4, 9, 16].","B":"This would be [x*2 for x in range(5)].","C":"This would be list(range(5)).","D":"Only 5 elements from range(5)."}'>
+                <h4>Q5: What does [x**2 for x in range(5)] produce?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">[0, 1, 4, 9, 16]</li>
+                    <li class="quiz-option" data-value="B">[0, 2, 4, 6, 8]</li>
+                    <li class="quiz-option" data-value="C">[0, 1, 2, 3, 4]</li>
+                    <li class="quiz-option" data-value="D">[1, 4, 9, 16, 25]</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 5</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>
