@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Linear Regression | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 3</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 3 Quiz: Linear Regression</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MSE is error metric.","B":"Correct! R² measures proportion of variance explained.","C":"MAE is another error metric.","D":"RMSE is root of MSE."}'>
+                <h4>Q1: R² (coefficient of determination) measures:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Mean squared error</li>
+                    <li class="quiz-option" data-value="B">Proportion of variance explained by the model</li>
+                    <li class="quiz-option" data-value="C">Mean absolute error</li>
+                    <li class="quiz-option" data-value="D">Number of features</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Ridge shrinks all.","B":"OLS has no penalty.","C":"Correct! Lasso can shrink coefficients to exactly zero.","D":"ElasticNet combines both."}'>
+                <h4>Q2: Which regularization can set coefficients exactly to zero?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Ridge (L2)</li>
+                    <li class="quiz-option" data-value="B">OLS (no regularization)</li>
+                    <li class="quiz-option" data-value="C">Lasso (L1)</li>
+                    <li class="quiz-option" data-value="D">None of the above</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Higher alpha = stronger regularization = simpler model.","B":"Higher alpha increases regularization.","C":"Related but opposite.","D":"Alpha controls regularization."}'>
+                <h4>Q3: Increasing the regularization parameter (alpha) in Ridge:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Shrinks coefficients more, reducing variance</li>
+                    <li class="quiz-option" data-value="B">Increases model complexity</li>
+                    <li class="quiz-option" data-value="C">Reduces bias</li>
+                    <li class="quiz-option" data-value="D">Has no effect on the model</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Missing data is preprocessing.","B":"Feature scaling is preprocessing.","C":"Categorical encoding is preprocessing.","D":"Correct! PolynomialFeatures creates x², x³, xy interactions."}'>
+                <h4>Q4: PolynomialFeatures in sklearn is used to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Handle missing values</li>
+                    <li class="quiz-option" data-value="B">Scale features</li>
+                    <li class="quiz-option" data-value="C">Encode categorical variables</li>
+                    <li class="quiz-option" data-value="D">Create polynomial and interaction terms</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Underfitting is high bias.","B":"Correct! Overfitting = low training error, high test error.","C":"This is the goal.","D":"Noise is data-related."}'>
+                <h4>Q5: A model with very low training error but high test error is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Underfitting</li>
+                    <li class="quiz-option" data-value="B">Overfitting</li>
+                    <li class="quiz-option" data-value="C">Well-generalized</li>
+                    <li class="quiz-option" data-value="D">Suffering from noise</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 3</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

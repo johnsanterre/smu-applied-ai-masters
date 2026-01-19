@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary | Applied Data Science | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Course Home</a>
+            <div class="navbar-subtitle">Key Terms Glossary</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Applied Data Science Glossary</h1>
+        </div>
+
+        <div class="card mt-2">
+            <h2>Supervised Learning</h2>
+            <div class="glossary-term">
+                <h4>Linear Regression</h4>
+                <p>Models relationship between features and continuous target as weighted sum: ŷ = w₀ + w₁x₁ + ... +
+                    wₙxₙ. Foundation for understanding more complex models.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Logistic Regression</h4>
+                <p>Classification algorithm using sigmoid function to predict probabilities. Despite the name, used for
+                    classification, not regression.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Regularization</h4>
+                <p>Techniques (L1/Lasso, L2/Ridge) that add penalty to loss function to prevent overfitting. Controls
+                    model complexity.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Decision Tree</h4>
+                <p>Model that learns if/else rules from data. Interpretable but prone to overfitting. Basis for ensemble
+                    methods.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Random Forest</h4>
+                <p>Ensemble of decision trees trained on random subsets of data and features. Reduces overfitting
+                    through averaging.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Gradient Boosting</h4>
+                <p>Ensemble method that trains trees sequentially, each correcting errors of previous. XGBoost,
+                    LightGBM, CatBoost are popular implementations.</p>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <h2>Model Evaluation</h2>
+            <div class="glossary-term">
+                <h4>Cross-Validation</h4>
+                <p>Technique for estimating model performance by training/testing on different data splits. K-fold is
+                    most common.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Bias-Variance Tradeoff</h4>
+                <p>High bias = underfitting, high variance = overfitting. Goal is finding the sweet spot between them.
+                </p>
+            </div>
+            <div class="glossary-term">
+                <h4>Precision & Recall</h4>
+                <p>Precision = TP/(TP+FP), Recall = TP/(TP+FN). Precision measures false positive rate; recall measures
+                    false negative rate.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>ROC-AUC</h4>
+                <p>Area under ROC curve. Measures classifier's ability to distinguish classes across all thresholds. 1.0
+                    = perfect, 0.5 = random.</p>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <h2>Unsupervised Learning</h2>
+            <div class="glossary-term">
+                <h4>K-Means</h4>
+                <p>Clustering algorithm that partitions data into K clusters by minimizing within-cluster variance.
+                    Sensitive to initialization.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>PCA (Principal Component Analysis)</h4>
+                <p>Dimensionality reduction by projecting onto directions of maximum variance. Useful for visualization
+                    and noise reduction.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>t-SNE</h4>
+                <p>Non-linear dimensionality reduction for visualization. Preserves local structure. Not suitable for
+                    downstream ML.</p>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <h2>Deep Learning Basics</h2>
+            <div class="glossary-term">
+                <h4>Neural Network</h4>
+                <p>Layers of neurons with learnable weights. Universal function approximator. Requires more data than
+                    classical ML.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Backpropagation</h4>
+                <p>Algorithm for computing gradients in neural networks. Chain rule applied layer by layer. Enables
+                    gradient descent training.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Activation Function</h4>
+                <p>Non-linear function (ReLU, sigmoid, tanh) applied to neuron outputs. Enables learning non-linear
+                    patterns.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Batch Normalization</h4>
+                <p>Normalizes layer inputs during training. Stabilizes and accelerates training. Nearly standard in deep
+                    networks.</p>
+            </div>
+        </div>
+
+        <div class="card mt-2">
+            <h2>MLOps & Pipelines</h2>
+            <div class="glossary-term">
+                <h4>Feature Engineering</h4>
+                <p>Creating new features from raw data to improve model performance. Often more impactful than model
+                    selection.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Pipeline</h4>
+                <p>sklearn Pipeline chains preprocessing and modeling steps. Prevents data leakage and simplifies
+                    deployment.</p>
+            </div>
+            <div class="glossary-term">
+                <h4>Hyperparameter Tuning</h4>
+                <p>Searching for optimal model settings (learning rate, tree depth, etc.). Grid search, random search,
+                    Bayesian optimization.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

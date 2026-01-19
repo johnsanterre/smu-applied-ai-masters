@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Classification | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 4</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 4 Quiz: Classification</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Sigmoid outputs values between 0 and 1.","B":"Softmax is for multi-class.","C":"ReLU is for neural networks.","D":"Tanh outputs -1 to 1."}'>
+                <h4>Q1: Logistic regression uses sigmoid because it outputs:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Values between 0 and 1 (probabilities)</li>
+                    <li class="quiz-option" data-value="B">Any real number</li>
+                    <li class="quiz-option" data-value="C">Only 0 or 1</li>
+                    <li class="quiz-option" data-value="D">Values between -1 and 1</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"MSE is for regression.","B":"MAE is for regression.","C":"Correct! Log loss (cross-entropy) is the standard for classification.","D":"R² is for regression."}'>
+                <h4>Q2: The standard loss function for logistic regression is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Mean squared error</li>
+                    <li class="quiz-option" data-value="B">Mean absolute error</li>
+                    <li class="quiz-option" data-value="C">Log loss (cross-entropy)</li>
+                    <li class="quiz-option" data-value="D">R² score</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Softmax.","B":"Correct! One-vs-rest trains K binary classifiers.","C":"This is multi-label.","D":"Softmax does this."}'>
+                <h4>Q3: One-vs-rest (OvR) multi-class strategy:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Uses one model with K outputs</li>
+                    <li class="quiz-option" data-value="B">Trains K separate binary classifiers</li>
+                    <li class="quiz-option" data-value="C">Allows multiple labels per sample</li>
+                    <li class="quiz-option" data-value="D">Is mathematically equivalent to softmax</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Stratifying helps but isnt only solution.","B":"More data helps but may not be available.","C":"This loses information.","D":"Correct! Class weights penalize errors on minority class more."}'>
+                <h4>Q4: To handle imbalanced classes, you can:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Only use stratified splits</li>
+                    <li class="quiz-option" data-value="B">Collect more data for all classes</li>
+                    <li class="quiz-option" data-value="C">Remove majority class samples</li>
+                    <li class="quiz-option" data-value="D">Adjust class weights in the model</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Lower threshold = more positive predictions = higher recall.","B":"Precision may drop.","C":"Threshold affects predictions.","D":"AUC is threshold-independent."}'>
+                <h4>Q5: Lowering the classification threshold from 0.5 to 0.3 will:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Increase recall (fewer false negatives)</li>
+                    <li class="quiz-option" data-value="B">Increase precision</li>
+                    <li class="quiz-option" data-value="C">Have no effect on predictions</li>
+                    <li class="quiz-option" data-value="D">Change the AUC score</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 4</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Hyperparameter Tuning | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 13</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 13 Quiz: Tuning & Pipelines</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Grid is exhaustive.","B":"Correct! Random search is more efficient with many hyperparameters.","C":"Both use CV.","D":"Random can find good solutions."}'>
+                <h4>Q1: RandomizedSearchCV is preferred over GridSearchCV when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">You have very few hyperparameters</li>
+                    <li class="quiz-option" data-value="B">The search space is large</li>
+                    <li class="quiz-option" data-value="C">You dont need cross-validation</li>
+                    <li class="quiz-option" data-value="D">You need the exact best parameters</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Pipeline prevents data leakage by fitting only on training data.","B":"Both can be fast.","C":"Pipelines can use any estimators.","D":"Pipelines ensure proper fitting."}'>
+                <h4>Q2: The main advantage of sklearn Pipeline is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Prevents data leakage during CV</li>
+                    <li class="quiz-option" data-value="B">Faster training</li>
+                    <li class="quiz-option" data-value="C">Only works with linear models</li>
+                    <li class="quiz-option" data-value="D">Avoids needing to call fit()</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Grid is exhaustive.","B":"Random samples.","C":"Correct! Bayesian uses probabilistic model to guide search.","D":"Evolution is different."}'>
+                <h4>Q3: Bayesian optimization (e.g., Optuna) works by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Trying every combination</li>
+                    <li class="quiz-option" data-value="B">Random sampling only</li>
+                    <li class="quiz-option" data-value="C">Using previous trials to guide future ones</li>
+                    <li class="quiz-option" data-value="D">Genetic mutation of parameters</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"pickle can be unsafe.","B":"json cant serialize models.","C":"csv is for data.","D":"Correct! joblib is recommended for sklearn models."}'>
+                <h4>Q4: To save a trained sklearn model, use:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">pickle only</li>
+                    <li class="quiz-option" data-value="B">model.to_json()</li>
+                    <li class="quiz-option" data-value="C">model.save_csv()</li>
+                    <li class="quiz-option" data-value="D">joblib.dump()</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Leakage gives optimistic estimates.","B":"Correct! Leakage happens when test info leaks into training.","C":"This is underfitting.","D":"This is validation strategy."}'>
+                <h4>Q5: Data leakage occurs when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Train set is too small</li>
+                    <li class="quiz-option" data-value="B">Information from test set influences training</li>
+                    <li class="quiz-option" data-value="C">Model underfits</li>
+                    <li class="quiz-option" data-value="D">Cross-validation is not used</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 13</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

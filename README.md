@@ -17,7 +17,7 @@ A comprehensive 10-course graduate program website for the Masters in Applied Ar
 └── courses/
     ├── course-01-statistics/    # Statistical Inference
     ├── course-02-programming/   # Programming & Computational Thinking
-    ├── course-03-classical-ai/  # Classical AI: Search and Logic
+    ├── course-03-data-science/  # Applied Data Science & Machine Learning
     ├── course-04-prompt-engineering/
     ├── course-05-llm-architectures/
     ├── course-06-distributed-systems/

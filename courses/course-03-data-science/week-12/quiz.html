@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Deep Learning | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 12</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 12 Quiz: PyTorch</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"optimizer.step() updates.","B":"loss.backward() computes gradients.","C":"Correct! model.train() sets training mode (enables dropout, etc).","D":"DataLoader handles batching."}'>
+                <h4>Q1: In PyTorch, model.train() is used to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Update model weights</li>
+                    <li class="quiz-option" data-value="B">Compute loss gradients</li>
+                    <li class="quiz-option" data-value="C">Set model to training mode</li>
+                    <li class="quiz-option" data-value="D">Load training data</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! DataLoader provides batching, shuffling, and multiprocessing.","B":"nn.Module defines networks.","C":"Tensor is the data structure.","D":"Optimizer updates weights."}'>
+                <h4>Q2: DataLoader in PyTorch handles:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Batching, shuffling, and parallel data loading</li>
+                    <li class="quiz-option" data-value="B">Defining network architecture</li>
+                    <li class="quiz-option" data-value="C">Computing gradients</li>
+                    <li class="quiz-option" data-value="D">Saving model checkpoints</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Step updates weights.","B":"Correct! zero_grad() clears gradients before backward pass.","C":"Backward computes gradients.","D":"Forward does prediction."}'>
+                <h4>Q3: Before calling loss.backward(), you should call:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">optimizer.step()</li>
+                    <li class="quiz-option" data-value="B">optimizer.zero_grad()</li>
+                    <li class="quiz-option" data-value="C">model.eval()</li>
+                    <li class="quiz-option" data-value="D">model.forward()</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Dropout prevents overfitting.","B":"BatchNorm normalizes.","C":"Linear is fully connected.","D":"Correct! Dropout randomly zeros neurons during training only."}'>
+                <h4>Q4: Dropout during training:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Increases learning rate</li>
+                    <li class="quiz-option" data-value="B">Normalizes activations</li>
+                    <li class="quiz-option" data-value="C">Reduces number of layers</li>
+                    <li class="quiz-option" data-value="D">Randomly sets some neuron outputs to zero</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! .to(device) moves tensors/models to GPU.","B":"CUDA is the GPU library.","C":".cuda() is older syntax.","D":"GPU must be available."}'>
+                <h4>Q5: To use GPU in PyTorch, you move tensors with:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">tensor.to(device) where device is 'cuda'</li>
+                    <li class="quiz-option" data-value="B">import cuda</li>
+                    <li class="quiz-option" data-value="C">tensor.gpu()</li>
+                    <li class="quiz-option" data-value="D">GPU is automatic</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 12</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

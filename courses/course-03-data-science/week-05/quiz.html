@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Model Evaluation | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 5</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 5 Quiz: Model Evaluation</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Train/test split may have variance.","B":"Correct! K-fold gives more reliable estimates by averaging K evaluations.","C":"K-fold can be slower.","D":"K-fold uses all data for both training and testing (separately)."}'>
+                <h4>Q1: The main advantage of K-fold cross-validation is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Faster than train/test split</li>
+                    <li class="quiz-option" data-value="B">More reliable performance estimate</li>
+                    <li class="quiz-option" data-value="C">Uses less computation</li>
+                    <li class="quiz-option" data-value="D">Requires less data</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Recall measures positive coverage.","B":"F1 is harmonic mean.","C":"Correct! Precision = TP/(TP+FP), measures accuracy of positive predictions.","D":"Specificity is TN/(TN+FP)."}'>
+                <h4>Q2: Precision measures:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Fraction of actual positives correctly predicted</li>
+                    <li class="quiz-option" data-value="B">Overall accuracy</li>
+                    <li class="quiz-option" data-value="C">Fraction of positive predictions that are correct</li>
+                    <li class="quiz-option" data-value="D">Fraction of negatives correctly predicted</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! ROC-AUC measures discrimination across all thresholds.","B":"Only at default threshold.","C":"Precision-recall curve does this.","D":"Its a curve summary."}'>
+                <h4>Q3: ROC-AUC measures:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Model's ability to distinguish classes across all thresholds
+                    </li>
+                    <li class="quiz-option" data-value="B">Accuracy at the optimal threshold</li>
+                    <li class="quiz-option" data-value="C">Precision at each recall level</li>
+                    <li class="quiz-option" data-value="D">The single best threshold</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"This leaks test info.","B":"Same problem.","C":"Better but still risky.","D":"Correct! All preprocessing must be in the CV loop to prevent leakage."}'>
+                <h4>Q4: To prevent data leakage during cross-validation:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Scale all data before splitting</li>
+                    <li class="quiz-option" data-value="B">Select features using all data</li>
+                    <li class="quiz-option" data-value="C">Use the test set for validation</li>
+                    <li class="quiz-option" data-value="D">Include all preprocessing steps in the CV loop</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Accuracy can be misleading with imbalance.","B":"Correct! F1 balances precision and recall, better for imbalanced data.","C":"MSE is for regression.","D":"R² is for regression."}'>
+                <h4>Q5: For imbalanced classification, a better metric than accuracy is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Accuracy only</li>
+                    <li class="quiz-option" data-value="B">F1 score or precision-recall AUC</li>
+                    <li class="quiz-option" data-value="C">Mean squared error</li>
+                    <li class="quiz-option" data-value="D">R² score</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 5</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

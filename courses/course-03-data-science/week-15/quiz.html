@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Review | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 15</a>
+            <div class="navbar-subtitle">Final Review</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Comprehensive Review Quiz</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Lasso uses L1.","B":"Ridge uses L2.","C":"Correct! Ridge adds L2 (squared) penalty.","D":"Neither is L0."}'>
+                <h4>Q1: Ridge regression adds which penalty?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">L1 (absolute values)</li>
+                    <li class="quiz-option" data-value="B">No penalty</li>
+                    <li class="quiz-option" data-value="C">L2 (squared values)</li>
+                    <li class="quiz-option" data-value="D">L0 (count of non-zero)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Ensemble combines multiple models.","B":"Single model.","C":"Transfer uses pretrained.","D":"Online learns incrementally."}'>
+                <h4>Q2: Random Forest is an example of:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Ensemble learning</li>
+                    <li class="quiz-option" data-value="B">Single model approach</li>
+                    <li class="quiz-option" data-value="C">Transfer learning</li>
+                    <li class="quiz-option" data-value="D">Online learning</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"PCA is linear.","B":"Correct! t-SNE preserves local neighborhood structure.","C":"K-Means clusters.","D":"DBSCAN clusters."}'>
+                <h4>Q3: For visualizing high-dimensional data, t-SNE excels at:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Preserving global distances</li>
+                    <li class="quiz-option" data-value="B">Preserving local structure</li>
+                    <li class="quiz-option" data-value="C">Classification</li>
+                    <li class="quiz-option" data-value="D">Regression</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Accuracy misleading with imbalance.","B":"Loss is training metric.","C":"Speed isnt performance.","D":"Correct! F1, precision, recall for imbalanced classification."}'>
+                <h4>Q4: For imbalanced classification, prefer:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Accuracy</li>
+                    <li class="quiz-option" data-value="B">Training loss</li>
+                    <li class="quiz-option" data-value="C">Training speed</li>
+                    <li class="quiz-option" data-value="D">F1 score or PR-AUC</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Pipeline chains steps and prevents leakage.","B":"Pipeline helps with both.","C":"Pipeline includes preprocessing.","D":"Pipelines are essential."}'>
+                <h4>Q5: sklearn Pipeline is important because it:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Prevents data leakage and ensures reproducibility</li>
+                    <li class="quiz-option" data-value="B">Only works with neural networks</li>
+                    <li class="quiz-option" data-value="C">Skips preprocessing</li>
+                    <li class="quiz-option" data-value="D">Is optional for production</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 15</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

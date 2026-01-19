@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: PCA | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 10</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 10 Quiz: PCA</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! PCA finds directions of maximum variance.","B":"LDA maximizes class separation.","C":"t-SNE preserves local structure.","D":"Clustering groups data."}'>
+                <h4>Q1: PCA finds components that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Maximize variance in the data</li>
+                    <li class="quiz-option" data-value="B">Maximize class separation</li>
+                    <li class="quiz-option" data-value="C">Minimize reconstruction error only</li>
+                    <li class="quiz-option" data-value="D">Cluster similar points</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Need to standardize.","B":"Should standardize.","C":"Correct! Different scales bias PCA toward larger-valued features.","D":"PCA uses covariance matrix."}'>
+                <h4>Q2: Before applying PCA, you should typically:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">One-hot encode all features</li>
+                    <li class="quiz-option" data-value="B">Remove all features</li>
+                    <li class="quiz-option" data-value="C">Standardize features (mean=0, std=1)</li>
+                    <li class="quiz-option" data-value="D">Apply log transform</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Fitting t-SNE to new data is problematic.","B":"Correct! t-SNE is non-linear and not suitable for fitting new data.","C":"t-SNE doesnt preserve global structure.","D":"t-SNE is for visualization."}'>
+                <h4>Q3: t-SNE is best used for:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Preprocessing before training ML models</li>
+                    <li class="quiz-option" data-value="B">Visualization of high-dimensional data</li>
+                    <li class="quiz-option" data-value="C">Guaranteeing global structure preservation</li>
+                    <li class="quiz-option" data-value="D">Speeding up computations</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Components are ordered by variance.","B":"First has most.","C":"They are orthogonal.","D":"Correct! Components are uncorrelated (orthogonal)."}'>
+                <h4>Q4: Principal components are:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The original features</li>
+                    <li class="quiz-option" data-value="B">Always equally important</li>
+                    <li class="quiz-option" data-value="C">Correlated with each other</li>
+                    <li class="quiz-option" data-value="D">Uncorrelated (orthogonal) linear combinations</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! 95% often good balance of reduction and info retention.","B":"Depends on task.","C":"More is not always better.","D":"Scree plot helps but not the only method."}'>
+                <h4>Q5: A common rule for choosing number of components:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Keep enough to explain 95% of variance</li>
+                    <li class="quiz-option" data-value="B">Always use exactly 2 components</li>
+                    <li class="quiz-option" data-value="C">Use as many as original features</li>
+                    <li class="quiz-option" data-value="D">Only use scree plot</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 10</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Ensembles | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 7</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 7 Quiz: Ensembles</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Bagging is parallel.","B":"Correct! Boosting trains sequentially, focusing on previous errors.","C":"Both can ensemble.","D":"Both train multiple."}'>
+                <h4>Q1: The key difference between bagging and boosting is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Bagging trains sequentially</li>
+                    <li class="quiz-option" data-value="B">Boosting trains sequentially on weighted errors</li>
+                    <li class="quiz-option" data-value="C">Only bagging uses multiple models</li>
+                    <li class="quiz-option" data-value="D">Only boosting uses decision trees</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Random subset reduces correlation between trees.","B":"max_features is feature subset.","C":"Random features decorrelate trees.","D":"It does reduce variance."}'>
+                <h4>Q2: Random Forest uses random feature subsets to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Reduce correlation between trees</li>
+                    <li class="quiz-option" data-value="B">Speed up training only</li>
+                    <li class="quiz-option" data-value="C">Ensure all features are used equally</li>
+                    <li class="quiz-option" data-value="D">Increase variance in predictions</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Learning rate scales contributions.","B":"Lower rate usually better with more trees.","C":"Correct! n_estimators is the number of trees in the ensemble.","D":"Depths are separate."}'>
+                <h4>Q3: In XGBoost, n_estimators controls:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">The learning rate</li>
+                    <li class="quiz-option" data-value="B">Maximum tree depth</li>
+                    <li class="quiz-option" data-value="C">Number of trees (boosting rounds)</li>
+                    <li class="quiz-option" data-value="D">Feature subset size</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Histogram-based splitting is fast.","B":"Leaf-wise growth.","C":"Sparse support.","D":"Correct! LightGBM optimizes for speed on large datasets."}'>
+                <h4>Q4: LightGBM is preferred when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">You need the simplest model</li>
+                    <li class="quiz-option" data-value="B">You have very few samples</li>
+                    <li class="quiz-option" data-value="C">Interpretability is critical</li>
+                    <li class="quiz-option" data-value="D">You have large datasets and need fast training</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Lower learning rate with more trees often improves.","B":"High rate can overshoot.","C":"Usually inverse.","D":"Early stopping helps."}'>
+                <h4>Q5: A lower learning rate in gradient boosting typically requires:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">More trees (n_estimators)</li>
+                    <li class="quiz-option" data-value="B">Fewer trees</li>
+                    <li class="quiz-option" data-value="C">Shallower trees</li>
+                    <li class="quiz-option" data-value="D">No regularization</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 7</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

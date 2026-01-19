@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Data Preprocessing | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 2</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 2 Quiz: Data Preprocessing</h1>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Dropping loses data.","B":"Zero may not make sense.","C":"Correct! Median is robust to outliers.","D":"Max is arbitrary."}'>
+                <h4>Q1: For numerical data with outliers, which imputation is most robust?</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Drop missing rows</li>
+                    <li class="quiz-option" data-value="B">Fill with 0</li>
+                    <li class="quiz-option" data-value="C">Fill with median</li>
+                    <li class="quiz-option" data-value="D">Fill with max</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! One-hot creates binary columns for each category.","B":"Label encoding creates ordinal values.","C":"Target encoding uses target statistics.","D":"Dummy creates n-1 columns."}'>
+                <h4>Q2: One-hot encoding creates:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Binary columns for each category</li>
+                    <li class="quiz-option" data-value="B">Ordinal integer values</li>
+                    <li class="quiz-option" data-value="C">Mean target values per category</li>
+                    <li class="quiz-option" data-value="D">A single column with counts</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"MinMaxScaler does 0-1.","B":"Correct! StandardScaler gives mean=0, std=1.","C":"This is MinMaxScaler.","D":"RobustScaler uses quartiles."}'>
+                <h4>Q3: StandardScaler transforms data to have:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Range [0, 1]</li>
+                    <li class="quiz-option" data-value="B">Mean 0 and standard deviation 1</li>
+                    <li class="quiz-option" data-value="C">Minimum 0 and maximum 1</li>
+                    <li class="quiz-option" data-value="D">Median 0 and IQR 1</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"This would leak test info.","B":"Still leaks.","C":"Must fit on train only.","D":"Correct! Fit on train, transform both prevents data leakage."}'>
+                <h4>Q4: To prevent data leakage when scaling:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Fit scaler on all data</li>
+                    <li class="quiz-option" data-value="B">Fit on test set only</li>
+                    <li class="quiz-option" data-value="C">Scale before splitting</li>
+                    <li class="quiz-option" data-value="D">Fit on training set, transform both</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! ColumnTransformer applies different transforms to different columns.","B":"Pipeline chains steps.","C":"Imputer fills missing.","D":"Encoder encodes categoricals."}'>
+                <h4>Q5: To apply different transformations to different columns, use:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">ColumnTransformer</li>
+                    <li class="quiz-option" data-value="B">Pipeline</li>
+                    <li class="quiz-option" data-value="C">SimpleImputer</li>
+                    <li class="quiz-option" data-value="D">LabelEncoder</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 2</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

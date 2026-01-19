@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Neural Networks | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 11</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 11 Quiz: Neural Networks</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Sigmoid saturates.","B":"Correct! ReLU avoids vanishing gradients and is fast.","C":"Tanh also saturates.","D":"Depends on layer."}'>
+                <h4>Q1: ReLU is preferred over sigmoid in hidden layers because:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It outputs probabilities</li>
+                    <li class="quiz-option" data-value="B">It avoids vanishing gradients</li>
+                    <li class="quiz-option" data-value="C">It is smoother</li>
+                    <li class="quiz-option" data-value="D">It always outputs positive values</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Backprop uses chain rule to compute gradients.","B":"Forward pass computes outputs.","C":"Initialization sets initial weights.","D":"Regularization prevents overfitting."}'>
+                <h4>Q2: Backpropagation computes:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Gradients of loss with respect to weights</li>
+                    <li class="quiz-option" data-value="B">The forward pass outputs</li>
+                    <li class="quiz-option" data-value="C">Initial weight values</li>
+                    <li class="quiz-option" data-value="D">The optimal learning rate</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Input layer receives data.","B":"Hidden layers learn features.","C":"Correct! Softmax outputs probabilities summing to 1.","D":"Convolution is for images."}'>
+                <h4>Q3: For multi-class classification, the output layer typically uses:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">ReLU</li>
+                    <li class="quiz-option" data-value="B">Sigmoid</li>
+                    <li class="quiz-option" data-value="C">Softmax</li>
+                    <li class="quiz-option" data-value="D">Linear</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"SGD is basic.","B":"Momentum adds velocity.","C":"RMSprop adapts learning rates.","D":"Correct! Adam combines momentum and adaptive learning rates."}'>
+                <h4>Q4: Adam optimizer combines:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Only gradient descent</li>
+                    <li class="quiz-option" data-value="B">Only momentum</li>
+                    <li class="quiz-option" data-value="C">Only adaptive learning rates</li>
+                    <li class="quiz-option" data-value="D">Momentum and adaptive learning rates</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"More layers can help but risk overfitting.","B":"Correct! Overparameterized networks overfit without regularization.","C":"Learning rate affects convergence.","D":"Batch size affects training."}'>
+                <h4>Q5: A neural network with too many parameters relative to data will:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Always perform better</li>
+                    <li class="quiz-option" data-value="B">Likely overfit</li>
+                    <li class="quiz-option" data-value="C">Train faster</li>
+                    <li class="quiz-option" data-value="D">Have lower training error and lower test error</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 11</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

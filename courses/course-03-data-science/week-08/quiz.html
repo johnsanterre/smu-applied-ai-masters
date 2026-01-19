@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: SVMs | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 8</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 8 Quiz: SVMs</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Minimizing error is one goal.","B":"Correct! SVMs maximize the margin between classes.","C":"Entropy is for trees.","D":"Least squares is regression."}'>
+                <h4>Q1: SVMs find the hyperplane that:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Minimizes training error</li>
+                    <li class="quiz-option" data-value="B">Maximizes the margin between classes</li>
+                    <li class="quiz-option" data-value="C">Minimizes entropy</li>
+                    <li class="quiz-option" data-value="D">Uses least squares</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Support vectors define boundary.","B":"All data points contribute.","C":"Correct! Kernel trick maps to higher dimensions without explicit computation.","D":"C controls margin/error trade-off."}'>
+                <h4>Q2: The kernel trick allows SVMs to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Train faster on large datasets</li>
+                    <li class="quiz-option" data-value="B">Reduce the number of features</li>
+                    <li class="quiz-option" data-value="C">Find non-linear boundaries without explicit feature mapping
+                    </li>
+                    <li class="quiz-option" data-value="D">Automatically select the best C</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Higher C = less tolerance for margin violations.","B":"Lower C allows more violations.","C":"Gamma controls kernel width.","D":"Kernel type is separate."}'>
+                <h4>Q3: Increasing the C parameter in SVM:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Makes the margin harder (less tolerance for errors)</li>
+                    <li class="quiz-option" data-value="B">Makes the margin softer</li>
+                    <li class="quiz-option" data-value="C">Changes the kernel</li>
+                    <li class="quiz-option" data-value="D">Reduces the number of support vectors always</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"RBF is common default.","B":"Linear is for linear data.","C":"Polynomial can work.","D":"Correct! High gamma makes influence local, risking overfitting."}'>
+                <h4>Q4: With RBF kernel, high gamma values lead to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Underfitting</li>
+                    <li class="quiz-option" data-value="B">Linear decision boundaries</li>
+                    <li class="quiz-option" data-value="C">Faster training</li>
+                    <li class="quiz-option" data-value="D">Overfitting (too complex boundaries)</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Large datasets slow down SVMs.","B":"Correct! SVMs work well on medium-sized, high-dimensional data.","C":"Linear may be better for high-D.","D":"Scaling is important."}'>
+                <h4>Q5: SVMs typically work well when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Dataset has millions of samples</li>
+                    <li class="quiz-option" data-value="B">Data is medium-sized with clear margin</li>
+                    <li class="quiz-option" data-value="C">Features are not scaled</li>
+                    <li class="quiz-option" data-value="D">Classes heavily overlap</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 8</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

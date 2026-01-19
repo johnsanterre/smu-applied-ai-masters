@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Clustering | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 9</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 9 Quiz: Clustering</h1>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"K is given.","B":"Correct! K-Means minimizes within-cluster sum of squares.","C":"Hierarchical does this.","D":"DBSCAN does this."}'>
+                <h4>Q1: K-Means clustering works by:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Finding the optimal number of clusters automatically</li>
+                    <li class="quiz-option" data-value="B">Minimizing within-cluster variance iteratively</li>
+                    <li class="quiz-option" data-value="C">Building a hierarchy of clusters</li>
+                    <li class="quiz-option" data-value="D">Finding density-connected regions</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Elbow method looks for diminishing returns in inertia.","B":"Silhouette measures cohesion.","C":"Random search is for hyperparameters.","D":"Cross-validation is for evaluation."}'>
+                <h4>Q2: The elbow method helps determine:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Optimal number of clusters K</li>
+                    <li class="quiz-option" data-value="B">Cluster quality score</li>
+                    <li class="quiz-option" data-value="C">Best random seed</li>
+                    <li class="quiz-option" data-value="D">Training/test split ratio</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"K-Means uses distance.","B":"Hierarchical can be slow.","C":"Correct! DBSCAN finds arbitrary shaped clusters based on density.","D":"DBSCAN doesnt need K."}'>
+                <h4>Q3: DBSCAN is preferred when:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Clusters are spherical</li>
+                    <li class="quiz-option" data-value="B">You know exact K</li>
+                    <li class="quiz-option" data-value="C">Clusters have arbitrary shapes and there are outliers</li>
+                    <li class="quiz-option" data-value="D">Data is low dimensional</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Inertia.","B":"Cohesion.","C":"Separation.","D":"Correct! Silhouette ranges from -1 to 1, higher is better."}'>
+                <h4>Q4: A silhouette score close to 1 indicates:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Poor clustering</li>
+                    <li class="quiz-option" data-value="B">Random assignment</li>
+                    <li class="quiz-option" data-value="C">Overlapping clusters</li>
+                    <li class="quiz-option" data-value="D">Well-separated, dense clusters</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"K-Means uses Euclidean by default.","B":"Correct! K-Means is sensitive to initialization.","C":"K-Means++ helps but initialization matters.","D":"Number of iterations varies."}'>
+                <h4>Q5: A limitation of K-Means is:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Cannot use Euclidean distance</li>
+                    <li class="quiz-option" data-value="B">Sensitive to initialization and outliers</li>
+                    <li class="quiz-option" data-value="C">Cannot scale to large datasets</li>
+                    <li class="quiz-option" data-value="D">Always converges to global optimum</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 9</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>

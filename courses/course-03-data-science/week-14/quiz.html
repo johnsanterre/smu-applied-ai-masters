@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: MLOps | SMU Applied AI</title>
+    <link rel="stylesheet" href="../../../assets/styles.css">
+    <script src="../../../assets/quiz.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html" class="navbar-back">Week 14</a>
+            <div class="navbar-subtitle">Knowledge Check</div>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <h1>Week 14 Quiz: MLOps</h1>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! MLflow tracks experiments, params, metrics, and models.","B":"sklearn is for ML algorithms.","C":"pandas is for data manipulation.","D":"pytest is for testing."}'>
+                <h4>Q1: MLflow is used for:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Experiment tracking and model registry</li>
+                    <li class="quiz-option" data-value="B">Building ML models</li>
+                    <li class="quiz-option" data-value="C">Data preprocessing</li>
+                    <li class="quiz-option" data-value="D">Unit testing</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="C"
+                data-explanations='{"A":"Concept drift is target change.","B":"Label noise is about labels.","C":"Correct! Data drift is change in input feature distributions.","D":"Model decay is a result."}'>
+                <h4>Q2: Data drift refers to:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Model weights changing</li>
+                    <li class="quiz-option" data-value="B">Labels becoming incorrect</li>
+                    <li class="quiz-option" data-value="C">Input feature distributions changing over time</li>
+                    <li class="quiz-option" data-value="D">Training data growing</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="B"
+                data-explanations='{"A":"Thats model training.","B":"Correct! Model serving exposes predictions via API.","C":"Thats feature engineering.","D":"Thats data collection."}'>
+                <h4>Q3: Model serving typically involves:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Training the model on new data</li>
+                    <li class="quiz-option" data-value="B">Exposing model predictions via REST API</li>
+                    <li class="quiz-option" data-value="C">Feature engineering</li>
+                    <li class="quiz-option" data-value="D">Collecting training data</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="D"
+                data-explanations='{"A":"Async is for performance.","B":"Exception handling is general.","C":"Caching is for performance.","D":"Correct! FastAPI has built-in validation via Pydantic."}'>
+                <h4>Q4: FastAPI is popular for ML serving because:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">It only supports async</li>
+                    <li class="quiz-option" data-value="B">It has no error handling</li>
+                    <li class="quiz-option" data-value="C">It automatically caches predictions</li>
+                    <li class="quiz-option" data-value="D">It has built-in data validation and auto-docs</li>
+                </ul>
+            </div>
+
+            <div class="quiz-question" data-correct="A"
+                data-explanations='{"A":"Correct! Shadow mode runs new model without affecting users.","B":"This is monitoring.","C":"This would affect users.","D":"This is load testing."}'>
+                <h4>Q5: Shadow deployment means:</h4>
+                <ul class="quiz-options">
+                    <li class="quiz-option" data-value="A">Running new model alongside old without serving to users</li>
+                    <li class="quiz-option" data-value="B">Monitoring model in production</li>
+                    <li class="quiz-option" data-value="C">Replacing old model immediately</li>
+                    <li class="quiz-option" data-value="D">Testing with synthetic data</li>
+                </ul>
+            </div>
+
+            <div class="btn-group mt-2">
+                <button class="btn btn-secondary quiz-reset">Reset Quiz</button>
+                <a href="index.html" class="btn btn-primary">Back to Week 14</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© 2026 SMU Lyle School of Engineering</p>
+    </footer>
+</body>
+
+</html>
